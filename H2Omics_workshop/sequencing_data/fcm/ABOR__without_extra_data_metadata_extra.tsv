@@ -1,0 +1,17 @@
+SampleID	sample_nr	sample_or_control	treatment	timepoint	DNA_Concentration	sample_volume_ml	na_type	replicate	experiment_type 
+ABOR.S006	S006	sample	ctrl	0	0.27	200	dna	1	lab 
+ABOR.S015	S015	sample	ctrl	72	0.42	50	dna	1	lab 
+ABOR.S017	S017	sample	glucose	72	2.7	50	dna	1	lab 
+ABOR.S019	S019	sample	acetate	72	8.1	50	dna	1	lab 
+ABOR.S021	S021	sample	fulvic_acid	72	1.5	50	dna	1	lab 
+ABOR.S023	S023	sample	phosphate	72	1.66	50	dna	1	lab 
+ABOR.blank1	blank1	blank	blank	NA	0.00001	NA	NA	1	NA
+ABOR.S034	S034	sample	ctrl	0	0.603	300	dna	2	lab 
+ABOR.blank3	blank3	blank	blank	NA	0.00001	NA	NA	2	NA
+ABOR.S039	S039	sample	ctrl	72	0.382	50	dna	2	lab 
+ABOR.S041	S041	sample	glucose	72	1.76	50	dna	2	lab 
+ABOR.S043	S043	sample	acetate	72	0.495	50	dna	2	lab 
+ABOR.S045	S045	sample	fulvic_acid	72	0.625	50	dna	2	lab 
+ABOR.S047	S047	sample	phosphate	72	0.127	50	dna	2	lab 
+ABOR.S058	S058	mock	mock	NA	0.6	NA	NA	1	NA
+ABOR.S094	S094	mock	mock	NA	0.6	NA	dna	2	NA

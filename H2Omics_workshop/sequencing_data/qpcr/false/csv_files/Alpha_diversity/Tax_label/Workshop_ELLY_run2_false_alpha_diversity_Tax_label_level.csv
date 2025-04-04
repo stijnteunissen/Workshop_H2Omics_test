@@ -1,0 +1,9 @@
+"BarcodeSequence","LinkerPrimerSequence","BarcodeName","ReversePrimer","ProjectName","sample_or_control","DNA_Concentration","na_type","exp_id","sample_type","dna_type","regrowth_day","pma","sq_calc_mean","read_count","sampleid","is.neg","Observed","Chao1","se.chao1","Shannon","Simpson"
+"TCCTTCCA","GTGYCAGCMGCCGCGGTAA","illCus515bar15","CCGYCAATTYMTTTRAGTTT","061324PV1lee926R","sample",6,"dna","exp_2","effluent","idna",0,"pma",20522496.45,90276,"ELLY27.29",FALSE,444,444,0,4.18,0.95
+"TCCTTGGT","GTGYCAGCMGCCGCGGTAA","illCus515bar17","CCGYCAATTYMTTTRAGTTT","061324PV1lee926R","sample",6,"dna","exp_2","ozonated","idna",0,"pma",9993733.075,94674,"ELLY31.33",FALSE,501,501,0,4.7,0.98
+"TCGAAGAG","GTGYCAGCMGCCGCGGTAA","illCus515bar20","CCGYCAATTYMTTTRAGTTT","061324PV1lee926R","sample",6,"dna","exp_2","effluent","idna",3,"pma",15368914.47,65976,"ELLY36.38",FALSE,332,332,0,3.93,0.94
+"TCGACAAC","GTGYCAGCMGCCGCGGTAA","illCus515bar22","CCGYCAATTYMTTTRAGTTT","061324PV1lee926R","sample",6,"dna","exp_2","ozonated","idna",3,"pma",15102704.22,53035,"ELLY40.42",FALSE,251,251,0,3.35,0.9
+"TCGAGCGA","GTGYCAGCMGCCGCGGTAA","illCus515bar28","CCGYCAATTYMTTTRAGTTT","061324PV1lee926R","sample",6,"dna","exp_3","effluent","idna",0,"pma",7633512.594,62807,"ELLY52.54",FALSE,451,451,0,4.85,0.98
+"TGGTAACC","GTGYCAGCMGCCGCGGTAA","illCus515bar30","CCGYCAATTYMTTTRAGTTT","061324PV1lee926R","sample",6,"dna","exp_3","ozonated","idna",0,"pma",1483074.97,79515,"ELLY56.58",FALSE,497,497,0,4.86,0.98
+"TGGTAGTC","GTGYCAGCMGCCGCGGTAA","illCus515bar33","CCGYCAATTYMTTTRAGTTT","061324PV1lee926R","sample",6,"dna","exp_3","effluent","idna",3,"pma",7640881.033,99253,"ELLY61.63",FALSE,375,375,0,3.76,0.92
+"TGGTATTG","GTGYCAGCMGCCGCGGTAA","illCus515bar35","CCGYCAATTYMTTTRAGTTT","061324PV1lee926R","sample",6,"dna","exp_3","ozonated","idna",3,"pma",31789946.26,109238,"ELLY65.67",FALSE,250,250,0,3.16,0.89
