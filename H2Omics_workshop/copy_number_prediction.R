@@ -3,7 +3,7 @@ copy_number_prediction <- function() {
 
   # Construct the destination folder using the global variable norm_method
   #destination_folder <- paste0("/content/wetsus_repo_analysis/r_visualisation_scripts/H2Omics_workshop/sequencing_data/", norm_method)
-  destination_folder <- paste0("/content/drive/MyDrive/H2Omics_workshop/sequencing_data/", norm_method)
+  destination_folder <- paste0("/content/Workshop_H2Omics_test/H2Omics_workshop/sequencing_data/", norm_method)
 
   # List files that match the prediction RDS pattern
   rasperGade16S_file <- list.files(destination_folder, pattern = "prediction\\.RDS$", full.names = TRUE)

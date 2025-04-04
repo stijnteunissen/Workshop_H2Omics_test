@@ -1,6 +1,6 @@
 install_packages <- function() {
   # Define the custom library folder on your Google Drive for phyloseq
-  drive_lib <- "/content/drive/MyDrive/H2Omics_workshop/Rlibs"
+  drive_lib <- "/content/Workshop_H2Omics_test/H2Omics_workshop/Rlibs"
   if (!dir.exists(drive_lib)) {
     dir.create(drive_lib, recursive = TRUE)
     message("Custom library folder created at: ", drive_lib)

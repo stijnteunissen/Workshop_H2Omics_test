@@ -1,6 +1,6 @@
 strarting_project <- function() {
 
-  main_dir = "drive/MyDrive/wetsus_data_analysis"
+  main_dir = "/content/drive/MyDrive/wetsus_data_analysis"
   # Set the main directory (adjust the path if needed)
   if (!dir.exists(main_dir)) {
     dir.create(main_dir, recursive = TRUE)

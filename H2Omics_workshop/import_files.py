@@ -15,29 +15,50 @@ def import_files():
     # Define paths using the retrieved R variables.
     project_folder = os.path.join(base_path, projects)
     qiime2_output_folder = os.path.join(project_folder, "qiime2_output")
-    git_folder = os.path.join("/content/drive/MyDrive/H2Omics_workshop/sequencing_data", norm_method)
+    git_folder = os.path.join("/content/Workshop_H2Omics_test/H2Omics_workshop/sequencing_data", norm_method)
     
     # Ensure qiime2_output folder exists
     os.makedirs(qiime2_output_folder, exist_ok=True)
+    
+    # Bepaal het CSV-bestand op basis van norm_method:
+    csv_path = None
+    if norm_method.lower() == "qpcr":
+        csv_pattern = re.compile(r".*qPCR.*\.csv$", re.IGNORECASE)
+    elif norm_method.lower() == "fcm":
+        csv_pattern = re.compile(r".*fcm.*\.csv$", re.IGNORECASE)
+    else:
+        csv_pattern = None
+
+    if csv_pattern and os.path.exists(git_folder):
+        for file in os.listdir(git_folder):
+            if csv_pattern.search(file):
+                csv_path = os.path.join(git_folder, file)
+                break
+
+    # Zoek het metadata_extra TSV-bestand in dezelfde git folder.
+    tsv_path = None
+    tsv_pattern = re.compile(r".*metadata_extra.*\.tsv$", re.IGNORECASE)
+    if os.path.exists(git_folder):
+        for file in os.listdir(git_folder):
+            if tsv_pattern.search(file):
+                tsv_path = os.path.join(git_folder, file)
+                break
 
     # Read and display the CSV and TSV files, showing only the first 5 rows.
-    csv_path = "/content/drive/MyDrive/H2Omics_workshop/sequencing_data/qpcr/ELLY_proj2_HGT_16S_per_mL_sample_qPCR.csv"
-    tsv_path = "/content/drive/MyDrive/H2Omics_workshop/sequencing_data/qpcr/ELLY_GMAC_proj2_Q17712_Q17733@qPCR_metadata_extra.tsv"
-    
-    if os.path.exists(csv_path):
+    if csv_path and os.path.exists(csv_path):
         csv_data = pd.read_csv(csv_path)
         print("CSV File (first 5 rows):")
         display(csv_data.head(5))
         print("\n" + "-"*80 + "\n")
     else:
-        print(f"CSV file not found: {csv_path}")
+        print(f"CSV file not found in git folder: {git_folder}")
 
-    if os.path.exists(tsv_path):
+    if tsv_path and os.path.exists(tsv_path):
         tsv_data = pd.read_csv(tsv_path, sep='\t')
         print("TSV File (first 5 rows):")
         display(tsv_data.head(5))
     else:
-        print(f"TSV file not found: {tsv_path}")
+        print(f"TSV file not found in git folder: {git_folder}")
 
     # Define file patterns to search for
     file_patterns = [
