@@ -6,14 +6,14 @@ import rpy2.robjects as ro
 
 def starting_project():
     # Define the main directory as in the original R script
-    main_dir = "drive/MyDrive/wetsus_data_analysis"
+    main_dir = "drive/MyDrive/H2Omics_data_analysis"
     
     # Create the main folder if it does not exist
     if not os.path.exists(main_dir):
         os.makedirs(main_dir)
-        print("Main folder 'wetsus_data_analysis' created.")
+        print("Main folder 'H2Omics_data_analysis' created.")
     else:
-        print("Main folder 'wetsus_data_analysis' already exists.")
+        print("Main folder 'H2Omics_data_analysis' already exists.")
     
     # Find existing project folders (directly under main_dir)
     existing_projects = [d for d in os.listdir(main_dir) if os.path.isdir(os.path.join(main_dir, d))]
