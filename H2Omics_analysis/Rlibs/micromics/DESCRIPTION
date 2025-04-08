@@ -23,7 +23,7 @@ GithubUsername: stijnteunissen
 GithubRef: HEAD
 GithubSHA1: 5ec3648eb5480fc58a7a840bc504150407ac333a
 NeedsCompilation: no
-Packaged: 2025-04-08 08:50:23 UTC; root
+Packaged: 2025-04-08 12:47:17 UTC; root
 Author: First Last [aut, cre] (YOUR-ORCID-ID)
 Maintainer: First Last <first.last@example.com>
-Built: R 4.4.3; ; 2025-04-08 08:50:24 UTC; unix
+Built: R 4.4.3; ; 2025-04-08 12:47:17 UTC; unix
