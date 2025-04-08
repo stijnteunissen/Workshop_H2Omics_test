@@ -181,14 +181,34 @@ install_packages <- function() {
   suppressMessages(devtools::install_github("stijnteunissen/micromics", force = TRUE, quiet = TRUE))
   suppressMessages(library(micromics))
 
-  suppressMessages(BiocManager::install(
-    c("SparseArray", "DelayedArray", "S4Arrays", "SummarizedExperiment", "SingleCellExperiment", "TreeSummarizedExperiment", "treeio", "microbiome"),
-    quiet = TRUE, update = TRUE, ask = FALSE
-  ))
+  if (!requireNamespace(c("SparseArray", "DelayedArray", "S4Arrays", "SummarizedExperiment", "SingleCellExperiment", "TreeSummarizedExperiment", "treeio", "microbiome"), quietly = TRUE)) {
+    BiocManager::install(
+      c("SparseArray", "DelayedArray", "S4Arrays", "SummarizedExperiment", "SingleCellExperiment", "TreeSummarizedExperiment", "treeio", "microbiome"),
+      quiet = TRUE, update = TRUE, ask = FALSE)
+  }
+  suppressMessages(library("SparseArray"))
+  suppressMessages(library("DelayedArray"))
+  suppressMessages(library("S4Arrays"))
+  suppressMessages(library("SummarizedExperiment"))
+  suppressMessages(library("SingleCellExperiment",))
+  suppressMessages(library("TreeSummarizedExperiment"))
+  suppressMessages(library("treeio"))
+  suppressMessages(library("microbiome"))
 
-  suppressMessages(devtools::install_github("jbisanz/qiime2R", quiet = TRUE))
-  suppressMessages(devtools::install_github(repo = "wu-lab-uva/RasperGade", quiet = TRUE))
-  suppressMessages(devtools::install_github(repo = "wu-lab-uva/RasperGade16S", quiet = TRUE))
+  if (!requireNamespace("qiime2R", quietly = TRUE)) {
+    devtools::install_github("jbisanz/qiime2R", quiet = TRUE)
+  }
+  suppressMessages(library(qiime2R))
+
+  if (!requireNamespace("RasperGade", quietly = TRUE)) {
+    devtools::install_github(repo = "wu-lab-uva/RasperGade", quiet = TRUE)
+  }
+  suppressMessages(library(RasperGade))
+
+  if (!requireNamespace("RasperGade16S", quietly = TRUE)) {
+    devtools::install_github(repo = "wu-lab-uva/RasperGade16S", quiet = TRUE)
+  }
+  suppressMessages(library(RasperGade16S))
 
   message("All packages have been installed and loaded.")
 }
