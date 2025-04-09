@@ -56,4 +56,4 @@ Author: Hervé Pagès [aut, cre],
   Aaron Lun [ctb],
   Beryl Kanali [ctb] (Converted vignettes from Sweave to RMarkdown)
 Maintainer: Hervé Pagès <hpages.on.github@gmail.com>
-Built: R 4.4.3; x86_64-pc-linux-gnu; 2025-04-02 09:14:37 UTC; unix
+Built: R 4.4.3; x86_64-pc-linux-gnu; 2025-04-09 07:50:08 UTC; unix

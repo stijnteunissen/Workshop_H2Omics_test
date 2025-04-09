@@ -1,3 +1,17 @@
+# CHANGES IN litedown VERSION 0.7
+
+- `pkg_manual()` will exclude help pages with the keyword `internal` (thanks, @TimTaylor, #78).
+
+- `pkg_news()` will add links to Github users and issue numbers if the package is hosted on Github.
+
+- Allow `,` and `.` in superscripts and subscripts (thanks, @janlisec, #81).
+
+- Special characters in bibliography entries such as `{\"u}` can be correctly read now (thanks, @bastistician).
+
+- Fixed a bug that inline code expressions (`` `{lang} expr` ``) cannot be correctly located when the line has leading spaces that are not meaningful.
+
+- Deleted vignettes `markdown-examples` and `markdown-output`. They are rendered on the package site now: https://git.yihui.org/litedown/examples/test-options.html
+
 # CHANGES IN litedown VERSION 0.6
 
 - Added a Markdown rendering option `offline` to download web resources when this option is set to true, so that the HTML output can be viewed offline (thanks, @TimTaylor, #73). See https://yihui.org/litedown/#sec:offline for more info.
