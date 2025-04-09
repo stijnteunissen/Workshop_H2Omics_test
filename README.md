@@ -3,7 +3,7 @@ Welcome to the H2Omics repository. this reposirtoy hosts notebooks that provide 
 
 The notebooks in this repository are designed so that you can perform your analysis without th eneed to dowload or install any additional software on your coputer - all you require is a Google account.
 ## Notebooks included
-* **H2Omics_workshop.ipynb**[https://colab.research.google.com/drive/1wPjiSnTrZ3amv1K2rDRF2EDA8EigyC9i#scrollTo=_uKg49kpQ2Rs] - This notebook is inteded for use during our live workshop. it offers guided insturciton and partical examples wiht loaded data.
+* **H2Omics_workshop.ipynb** - This notebook is inteded for use during our live workshop. it offers guided insturciton and partical examples wiht loaded data. [https://colab.research.google.com/drive/1wPjiSnTrZ3amv1K2rDRF2EDA8EigyC9i#scrollTo=_uKg49kpQ2Rs]
 * **H2Omics_analysis.ipynb** - This notebook is for analysing your own sequencing data.
 
 ## Additional Folders
