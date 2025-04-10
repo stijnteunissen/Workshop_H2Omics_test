@@ -1,6 +1,6 @@
 install_packages <- function() {
   # Define the custom library folder on your Google Drive for phyloseq
-  drive_lib <- "/content/Workshop_H2Omics_test/H2Omics_workshop/Rlibs" #"/content/Workshop_H2Omics_test/H2Omics_workshop/Rlibs"
+  drive_lib <- "/content/drive/MyDrive/Rlibs" #"/content/Workshop_H2Omics_test/H2Omics_workshop/Rlibs"
   if (!dir.exists(drive_lib)) {
     dir.create(drive_lib, recursive = TRUE)
     message("Custom library folder created at: ", drive_lib)
@@ -78,7 +78,7 @@ install_packages <- function() {
   suppressMessages(library(devtools))
 
   # Install H2Omics from GitHub in the temporary environment (default library)
-  suppressMessages(devtools::install_github("stijnteunissen/H2Omics", force = TRUE, quiet = TRUE))
+  suppressMessages(devtools::install_github("stijnteunissen/H2Omics", quiet = TRUE))
   suppressMessages(library(H2Omics))
 
   message("All packages have been installed and loaded.")
