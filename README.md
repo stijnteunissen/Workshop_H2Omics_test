@@ -7,7 +7,7 @@ The notebooks in this repository are designed so that you can perform your analy
 ## Notebooks Included
 
 * **H2Omics_workshop.ipynb** – This notebook is intended for use during our live workshop. It offers guided instruction and practical examples with pre-loaded data.  
-  [Launch on Google Colab](https://colab.research.google.com/drive/1wPjiSnTrZ3amv1K2rDRF2EDA8EigyC9i#scrollTo=_uKg49kpQ2Rs)
+  [Launch on Google Colab](https://colab.research.google.com/drive/1wPjiSnTrZ3amv1K2rDRF2EDA8EigyC9i?usp=sharing)
 
 * **H2Omics_analysis.ipynb** – This notebook is for analysing your own sequencing data.  
   [Launch on Google Colab](https://colab.research.google.com/drive/1gloVy3j9numgCU8aAmEbxQzyEws8ivj1)
