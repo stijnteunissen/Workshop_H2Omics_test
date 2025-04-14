@@ -51,4 +51,4 @@ Author: R. Gentleman [aut],
     translation from Sweave to Rmarkdown / HTML),
   Bioconductor Package Maintainer [cre]
 Maintainer: Bioconductor Package Maintainer <maintainer@bioconductor.org>
-Built: R 4.4.3; x86_64-pc-linux-gnu; 2025-04-10 13:55:15 UTC; unix
+Built: R 4.4.3; x86_64-pc-linux-gnu; 2025-04-14 09:31:25 UTC; unix
