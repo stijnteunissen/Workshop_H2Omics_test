@@ -13,10 +13,10 @@ copy_number_prediction <- function() {
 
   # Create a tibble from the discrete slot and rename/select relevant columns
   raspergade_df <- rasperGade16S_rds$discrete %>%
-    dplyr::rename(OTU = label,
+    dplyr::rename(Feature_ID = label,
                   copy_number = x,
                   probability = probs) %>%
-    dplyr::select(OTU, copy_number, probability) %>%
+    dplyr::select(Feature_ID, copy_number, probability) %>%
     as_tibble()
 
   # Construct the qiime output directory path
