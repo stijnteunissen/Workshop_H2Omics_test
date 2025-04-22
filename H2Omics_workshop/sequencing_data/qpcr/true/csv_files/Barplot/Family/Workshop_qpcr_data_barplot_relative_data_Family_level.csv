@@ -1,0 +1,349 @@
+Kingdom,Phylum,Class,Order,Family,Sample.01,Sample.02,Sample.03,Sample.04
+Bacteria,Proteobacteria,Gammaproteobacteria,Burkholderiales,*Comamonadaceae*,7.15,7.8,19.91,27.59
+Bacteria,Bacteroidota,Bacteroidia,Flavobacteriales,*Flavobacteriaceae*,18.09,7.35,14.54,13.7
+Bacteria,Proteobacteria,Gammaproteobacteria,Burkholderiales,*Rhodocyclaceae*,10.58,10.22,4.55,0.95
+Bacteria,Proteobacteria,Alphaproteobacteria,Sphingomonadales,*Sphingomonadaceae*,1.03,1.47,3.35,10.92
+Bacteria,Proteobacteria,Gammaproteobacteria,Burkholderiales,*Neisseriaceae*,7.81,6.86,0.33,0.23
+Bacteria,Verrucomicrobiota,Verrucomicrobiae,Verrucomicrobiales,*Verrucomicrobiaceae*,2.25,3.99,5.67,1.58
+Bacteria,Proteobacteria,Gammaproteobacteria,Burkholderiales,*Burkholderiaceae*,0.94,1.02,5.79,1.95
+Bacteria,Chloroflexi,Anaerolineae,Anaerolineales,*Anaerolineaceae*,2.77,2.37,4.32,0.13
+Bacteria,Patescibacteria,Saccharimonadia,Saccharimonadales,*Saccharimonadales*,6.11,1.73,1.08,0.17
+Bacteria,Bacteroidota,Bacteroidia,Chitinophagales,*Chitinophagaceae*,1.95,2.63,2.14,2.14
+Bacteria,Proteobacteria,Gammaproteobacteria,Burkholderiales,*Oxalobacteraceae*,0.45,0.55,0.77,7
+Bacteria,Verrucomicrobiota,Verrucomicrobiae,Pedosphaerales,*Pedosphaeraceae*,1.68,2.34,4.3,0.36
+Bacteria,Proteobacteria,Gammaproteobacteria,Alteromonadales,*Alteromonadaceae*,0.71,0.31,0.84,4.75
+Bacteria,Nitrospirota,Nitrospiria,Nitrospirales,*Nitrospiraceae*,0.75,3.21,1.46,0.43
+Bacteria,Firmicutes,Clostridia,Peptostreptococcales-Tissierellales,*Peptostreptococcaceae*,1.11,2.77,0.69,0.94
+Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,*Pseudomonadaceae*,0.36,0.38,0.15,4.31
+Bacteria,Proteobacteria,Gammaproteobacteria,Burkholderiales,*Nitrosomonadaceae*,1.15,1.87,1.33,0.31
+Bacteria,Bacteroidota,Bacteroidia,Cytophagales,*Spirosomaceae*,0.18,0.22,1.61,2.65
+Bacteria,Cyanobacteria,Vampirivibrionia,Obscuribacterales,*Obscuribacteraceae*,1.08,2.17,0.77,0.62
+Bacteria,Proteobacteria,Alphaproteobacteria,Rhodobacterales,*Rhodobacteraceae*,0.42,0.7,0.79,2.28
+Bacteria,Proteobacteria,Gammaproteobacteria,Salinisphaerales,*Solimonadaceae*,1.04,1.41,0.92,0.75
+Bacteria,Proteobacteria,Alphaproteobacteria,Rickettsiales,*Rickettsiaceae*,0.89,1.09,0.83,1.1
+Bacteria,Firmicutes,Clostridia,Clostridiales,*Clostridiaceae*,0.83,1.95,0.43,0.6
+Bacteria,Proteobacteria,Alphaproteobacteria,Holosporales,*Holosporaceae*,1.57,1.66,0.4,0.13
+Bacteria,Bacteroidota,Bacteroidia,Chitinophagales,*Saprospiraceae*,0.9,1.26,1.2,0.17
+Bacteria,Bacteroidota,Bacteroidia,Sphingobacteriales,*NS11-12_marine_group*,0.58,0.72,1.34,0.88
+Bacteria,Proteobacteria,Alphaproteobacteria,Caulobacterales,*Hyphomonadaceae*,0.33,0.55,0.69,1.64
+Bacteria,Planctomycetota,Planctomycetes,Planctomycetales,*Rubinisphaeraceae*,0.45,1.15,1.18,0.35
+Bacteria,Proteobacteria,Gammaproteobacteria,Pseudomonadales,*Moraxellaceae*,1.63,0.75,0.23,0.34
+Bacteria,Planctomycetota,OM190,OM190,*OM190*,0.5,0.95,1.2,0.17
+Bacteria,Proteobacteria,Alphaproteobacteria,Caulobacterales,*Caulobacteraceae*,0.14,0.25,0.33,1.62
+Bacteria,Planctomycetota,Planctomycetes,Pirellulales,*Pirellulaceae*,0.29,1.11,0.5,0.33
+Bacteria,Proteobacteria,Gammaproteobacteria,Gammaproteobacteria_Incertae_Sedis,*Unknown_Family*,0.86,1.15,0.11,0.07
+Bacteria,Patescibacteria,Parcubacteria,Candidatus_Nomurabacteria,*Candidatus_Nomurabacteria*,1.42,0.46,0.2,0.05
+Bacteria,Bacteroidota,Bacteroidia,Chitinophagales,*Family* (*of*) Chitinophagales,0.82,0.69,0.52,0.04
+Bacteria,Proteobacteria,Alphaproteobacteria,Paracaedibacterales,*Paracaedibacteraceae*,0.32,0.63,0.53,0.3
+Bacteria,Proteobacteria,Gammaproteobacteria,Xanthomonadales,*Xanthomonadaceae*,0.2,0.55,0.25,0.74
+Bacteria,Proteobacteria,Gammaproteobacteria,CHAB-XI-27,*CHAB-XI-27*,0.35,0.37,0.74,0.26
+Bacteria,Proteobacteria,Alphaproteobacteria,Reyranellales,*Reyranellaceae*,0.22,0.35,0.21,0.92
+Bacteria,Bacteroidota,Bacteroidia,Cytophagales,*Microscillaceae*,0.39,0.46,0.7,0.1
+Bacteria,Patescibacteria,Parcubacteria,Parcubacteria,*Parcubacteria*,1.07,0.26,0.24,0
+Bacteria,Bacteroidota,Bacteroidia,Sphingobacteriales,*env.OPS_17*,0.56,0.35,0.52,0.05
+Bacteria,Proteobacteria,Gammaproteobacteria,Burkholderiales,*Methylophilaceae*,0.14,0.13,0.3,0.9
+Bacteria,Myxococcota,Polyangia,Haliangiales,*Haliangiaceae*,0.47,0.6,0.31,0.08
+Bacteria,Proteobacteria,Gammaproteobacteria,Cellvibrionales,*Cellvibrionaceae*,0.9,0.38,0.06,0.04
+Bacteria,Bdellovibrionota,Bdellovibrionia,Bdellovibrionales,*Bdellovibrionaceae*,0.64,0.49,0.17,0.04
+Bacteria,Proteobacteria,Class of Proteobacteria,Order of Proteobacteria,*Family* (*of*) Proteobacteria,0.39,0.57,0.26,0.1
+Bacteria,Proteobacteria,Alphaproteobacteria,Rickettsiales,*AB1*,0.14,0.23,0.53,0.4
+Bacteria,Bacteroidota,Bacteroidia,Flavobacteriales,*NS9_marine_group*,0.36,0.33,0.38,0.06
+Bacteria,Dependentiae,Babeliae,Babeliales,*Babeliales*,0.46,0.62,0,0.01
+Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,*Beijerinckiaceae*,0.12,0.15,0.05,0.75
+Bacteria,Spirochaetota,Leptospirae,Leptospirales,*Leptospiraceae*,0.81,0.15,0.1,0
+Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,*Rhizobiaceae*,0.18,0.23,0.3,0.34
+Bacteria,Bacteroidota,Bacteroidia,Sphingobacteriales,*AKYH767*,0.38,0.4,0.25,0.01
+Bacteria,Bacteroidota,Bacteroidia,Sphingobacteriales,*Sphingobacteriaceae*,0.2,0.4,0.16,0.24
+Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,*Rhizobiales_Incertae_Sedis*,0.15,0.25,0.31,0.2
+Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,*Hyphomicrobiaceae*,0.16,0.26,0.41,0.07
+Bacteria,Planctomycetota,Planctomycetes,Planctomycetales,*Family* (*of*) Planctomycetales,0.05,0.41,0.16,0.23
+Bacteria,Bacteroidota,Bacteroidia,Bacteroidales,*Rikenellaceae*,0.47,0.34,0.01,0
+Bacteria,Proteobacteria,Alphaproteobacteria,Caedibacterales,*Caedibacteraceae*,0.15,0.57,0.07,0.03
+Bacteria,Proteobacteria,Gammaproteobacteria,Burkholderiales,*Alcaligenaceae*,0.12,0.18,0.08,0.42
+Bacteria,Proteobacteria,Gammaproteobacteria,Legionellales,*Legionellaceae*,0.1,0.11,0.53,0.05
+Bacteria,Actinobacteriota,Actinobacteria,Order of Actinobacteria,*Family* (*of*) Actinobacteria,0.32,0.34,0.07,0.05
+Bacteria,Bacteroidota,Bacteroidia,Bacteroidales,*Paludibacteraceae*,0.51,0.2,0.01,0.02
+Bacteria,Proteobacteria,Alphaproteobacteria,Rickettsiales,*SM2D12*,0.32,0.31,0.06,0.02
+Bacteria,Verrucomicrobiota,Verrucomicrobiae,Opitutales,*Opitutaceae*,0.12,0.23,0.31,0
+Bacteria,Bacteroidota,Kapabacteria,Kapabacteriales,*Kapabacteriales*,0.26,0.16,0.21,0.02
+Bacteria,Proteobacteria,Gammaproteobacteria,Xanthomonadales,*Rhodanobacteraceae*,0.19,0.3,0.16,0
+Bacteria,Firmicutes,Bacilli,Lactobacillales,*Carnobacteriaceae*,0.31,0.27,0.04,0.02
+Bacteria,Actinobacteriota,Acidimicrobiia,Microtrichales,*Microtrichaceae*,0.18,0.2,0.17,0.05
+Bacteria,Bacteroidota,Bacteroidia,Bacteroidales,*Prolixibacteraceae*,0.22,0.27,0.11,0
+Bacteria,Bacteroidota,Bacteroidia,Chitinophagales,*37-13*,0.18,0.23,0.15,0.02
+Bacteria,Dependentiae,Babeliae,Babeliales,*Vermiphilaceae*,0.12,0.24,0.11,0.11
+Bacteria,Bdellovibrionota,Oligoflexia,0319-6G20,*0319-6G20*,0.29,0.25,0.04,0
+Bacteria,Proteobacteria,Gammaproteobacteria,Order of Gammaproteobacteria,*Family* (*of*) Gammaproteobacteria,0.19,0.27,0.06,0.06
+Bacteria,Proteobacteria,Gammaproteobacteria,Oceanospirillales,*Pseudohongiellaceae*,0.18,0.11,0.2,0.08
+Bacteria,Proteobacteria,Gammaproteobacteria,Burkholderiales,*Sutterellaceae*,0.19,0.18,0.15,0.01
+Bacteria,Bdellovibrionota,Oligoflexia,Oligoflexales,*Family* (*of*) Oligoflexales,0.04,0.12,0.36,0.01
+Bacteria,Myxococcota,Polyangia,Nannocystales,*Nannocystaceae*,0.13,0.17,0.16,0.05
+Bacteria,Proteobacteria,Gammaproteobacteria,Oceanospirillales,*Halomonadaceae*,0.14,0.24,0.12,0
+Bacteria,Proteobacteria,Gammaproteobacteria,Acidithiobacillales,*Acidithiobacillaceae*,0.05,0.42,0,0
+Bacteria,Verrucomicrobiota,Chlamydiae,Chlamydiales,*Simkaniaceae*,0.12,0.25,0.05,0.04
+Bacteria,Bacteroidota,Bacteroidia,Sphingobacteriales,*LiUU-11-161*,0.18,0.19,0.08,0
+Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,*A0839*,0.03,0.32,0.06,0.04
+Bacteria,Actinobacteriota,Actinobacteria,Micrococcales,*Intrasporangiaceae*,0.14,0.22,0.09,0
+Bacteria,Chloroflexi,Anaerolineae,1-20,*1-20*,0.08,0.16,0.2,0.02
+Bacteria,Actinobacteriota,Actinobacteria,Corynebacteriales,*Mycobacteriaceae*,0,0.09,0.33,0.03
+Bacteria,Myxococcota,Polyangia,Polyangiales,*Sandaracinaceae*,0.15,0.11,0.16,0.03
+Bacteria,Verrucomicrobiota,Verrucomicrobiae,Chthoniobacterales,*Terrimicrobiaceae*,0.09,0.24,0.08,0.04
+Bacteria,Bacteroidota,Bacteroidia,Bacteroidales,*Bacteroidaceae*,0.25,0.16,0,0.01
+Bacteria,Dependentiae,Babeliae,Babeliales,*UBA12409*,0.06,0.05,0.31,0
+Bacteria,Planctomycetota,Planctomycetes,Gemmatales,*Gemmataceae*,0.04,0.19,0.09,0.1
+Bacteria,Verrucomicrobiota,Chlamydiae,Chlamydiales,*Family* (*of*) Chlamydiales,0.11,0.13,0.07,0.1
+Bacteria,Bacteroidota,Bacteroidia,Flavobacteriales,*Crocinitomicaceae*,0.14,0.12,0.13,0.01
+Bacteria,Bacteroidota,Bacteroidia,Sphingobacteriales,*Lentimicrobiaceae*,0.17,0.13,0.09,0
+Bacteria,Chloroflexi,Anaerolineae,Caldilineales,*Caldilineaceae*,0.08,0.18,0.13,0
+Bacteria,Planctomycetota,Planctomycetes,Isosphaerales,*Isosphaeraceae*,0.1,0.17,0.05,0.07
+Bacteria,Campilobacterota,Campylobacteria,Campylobacterales,*Arcobacteraceae*,0.27,0.09,0.01,0.01
+Bacteria,Proteobacteria,Alphaproteobacteria,Acetobacterales,*Acetobacteraceae*,0.03,0.08,0.1,0.17
+Bacteria,Chloroflexi,Anaerolineae,SBR1031,*A4b*,0.06,0.15,0.16,0.02
+Bacteria,Patescibacteria,Parcubacteria,Order of Parcubacteria,*Family* (*of*) Parcubacteria,0.23,0.13,0.01,0
+Bacteria,Proteobacteria,Gammaproteobacteria,Burkholderiales,*Aquaspirillaceae*,0.21,0.12,0.03,0
+Bacteria,Proteobacteria,Gammaproteobacteria,Aeromonadales,*Aeromonadaceae*,0.18,0.12,0.01,0.02
+Bacteria,Cyanobacteria,Vampirivibrionia,Gastranaerophilales,*Gastranaerophilales*,0.12,0.2,0,0
+Bacteria,Planctomycetota,Phycisphaerae,Phycisphaerales,*Phycisphaeraceae*,0.03,0.22,0.08,0
+Bacteria,Verrucomicrobiota,Omnitrophia,Omnitrophales,*Omnitrophaceae*,0.08,0.23,0,0
+Bacteria,Proteobacteria,Alphaproteobacteria,Rhodospirillales,*Rhodospirillaceae*,0.05,0.11,0.14,0.02
+Bacteria,Proteobacteria,Gammaproteobacteria,Burkholderiales,*Gallionellaceae*,0.08,0.13,0.1,0.01
+Bacteria,WPS-2,WPS-2,WPS-2,*WPS-2*,0.08,0.11,0.07,0.04
+Bacteria,Gemmatimonadota,Gemmatimonadetes,Gemmatimonadales,*Gemmatimonadaceae*,0.08,0.11,0.08,0.02
+Bacteria,Proteobacteria,Gammaproteobacteria,Ga0077536,*Ga0077536*,0.1,0.09,0.09,0
+Bacteria,Firmicutes,Bacilli,Erysipelotrichales,*Erysipelotrichaceae*,0.06,0.14,0.04,0.04
+Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,*Xanthobacteraceae*,0.01,0.11,0.08,0.08
+Bacteria,Proteobacteria,Gammaproteobacteria,Diplorickettsiales,*Diplorickettsiaceae*,0.09,0.15,0.02,0.02
+Bacteria,Verrucomicrobiota,Verrucomicrobiae,Chthoniobacterales,*Chthoniobacteraceae*,0.08,0.09,0.1,0
+Bacteria,Actinobacteriota,Thermoleophilia,Solirubrobacterales,*67-14*,0.08,0.12,0.06,0
+Bacteria,Acidobacteriota,Vicinamibacteria,Vicinamibacterales,*Family* (*of*) Vicinamibacterales,0,0.14,0.1,0.02
+Bacteria,Proteobacteria,Gammaproteobacteria,Thiotrichales,*Thiotrichaceae*,0.1,0.13,0.02,0.01
+Bacteria,Myxococcota,Polyangia,Polyangiales,*Polyangiaceae*,0.07,0.11,0.07,0
+Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,*Devosiaceae*,0.06,0.08,0.07,0.04
+Bacteria,Bacteroidota,Bacteroidia,Flavobacteriales,*Family* (*of*) Flavobacteriales,0.06,0.09,0.03,0.06
+Bacteria,Firmicutes,Clostridia,Lachnospirales,*Lachnospiraceae*,0.11,0.1,0.01,0.02
+Bacteria,Proteobacteria,Alphaproteobacteria,Azospirillales,*Azospirillales_Incertae_Sedis*,0.04,0.1,0.06,0.04
+Bacteria,Proteobacteria,Alphaproteobacteria,Rhodospirillales,*Family* (*of*) Rhodospirillales,0.13,0.1,0,0
+Bacteria,SAR324_clade(Marine_group_B),SAR324_clade(Marine_group_B),SAR324_clade(Marine_group_B),*SAR324_clade(Marine_group_B)*,0.08,0.09,0.06,0
+Bacteria,Hydrogenedentes,Hydrogenedentia,Hydrogenedentiales,*Hydrogenedensaceae*,0.05,0.1,0.06,0.01
+Bacteria,Myxococcota,Polyangia,Blfdi19,*Blfdi19*,0.06,0.09,0.05,0.01
+Bacteria,Bacteroidota,Bacteroidia,Flavobacteriales,*Weeksellaceae*,0.06,0.05,0.01,0.08
+Bacteria,Fibrobacterota,Fibrobacteria,Fibrobacterales,*Fibrobacteraceae*,0.18,0.02,0,0
+Bacteria,Bacteroidota,SJA-28,SJA-28,*SJA-28*,0.07,0.07,0.04,0.01
+Bacteria,Acidobacteriota,Vicinamibacteria,Vicinamibacterales,*Vicinamibacteraceae*,0,0.05,0.09,0.04
+Bacteria,Proteobacteria,Alphaproteobacteria,Micavibrionales,*Family* (*of*) Micavibrionales,0.05,0.1,0.04,0
+Bacteria,Proteobacteria,Gammaproteobacteria,Competibacterales,*Competibacteraceae*,0.04,0.08,0.06,0
+Bacteria,Acidobacteriota,Thermoanaerobaculia,Thermoanaerobaculales,*Thermoanaerobaculaceae*,0,0.16,0,0.02
+Bacteria,Bacteroidota,Bacteroidia,Order of Bacteroidia,*Family* (*of*) Bacteroidia,0.04,0.05,0.08,0
+Bacteria,Myxococcota,Myxococcia,Myxococcales,*Myxococcaceae*,0.05,0.06,0.05,0.01
+Bacteria,Proteobacteria,Gammaproteobacteria,Coxiellales,*Coxiellaceae*,0,0.11,0.05,0.01
+Bacteria,Verrucomicrobiota,Chlamydiae,Chlamydiales,*Parachlamydiaceae*,0.04,0.08,0.04,0
+Bacteria,Proteobacteria,Gammaproteobacteria,Cellvibrionales,*Halieaceae*,0.03,0.06,0.05,0.02
+Bacteria,Proteobacteria,Alphaproteobacteria,Order of Alphaproteobacteria,*Family* (*of*) Alphaproteobacteria,0,0.08,0.05,0.02
+Bacteria,Proteobacteria,Gammaproteobacteria,Immundisolibacterales,*Immundisolibacteraceae*,0.11,0.02,0.02,0
+Bacteria,Proteobacteria,Gammaproteobacteria,Cellvibrionales,*Spongiibacteraceae*,0.04,0.07,0.03,0.02
+Bacteria,Bacteroidota,Bacteroidia,Bacteroidales,*Tannerellaceae*,0.08,0.06,0,0
+Bacteria,Proteobacteria,Alphaproteobacteria,Micropepsales,*Micropepsaceae*,0.01,0.09,0.01,0.04
+Bacteria,Bacteroidota,Bacteroidia,Cytophagales,*Cytophagaceae*,0.03,0.07,0.04,0
+Bacteria,Chloroflexi,Chloroflexia,Thermomicrobiales,*JG30-KF-CM45*,0.02,0.07,0.01,0.03
+Bacteria,Proteobacteria,Gammaproteobacteria,CCM19a,*CCM19a*,0.05,0.05,0.02,0.01
+Bacteria,Chloroflexi,Anaerolineae,Ardenticatenales,*Family* (*of*) Ardenticatenales,0.04,0.05,0.04,0
+Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacterales,*Enterobacteriaceae*,0.05,0.05,0.01,0.01
+Bacteria,Verrucomicrobiota,Verrucomicrobiae,Opitutales,*Puniceicoccaceae*,0.05,0.05,0.01,0.01
+Bacteria,Actinobacteriota,Actinobacteria,Micrococcales,*Microbacteriaceae*,0.01,0.05,0,0.07
+Bacteria,Proteobacteria,Gammaproteobacteria,Burkholderiales,*Hydrogenophilaceae*,0.06,0.05,0.02,0
+Bacteria,Proteobacteria,Gammaproteobacteria,R7C24,*R7C24*,0,0.03,0.1,0
+Bacteria,Proteobacteria,Gammaproteobacteria,Methylococcales,*Methylomonadaceae*,0.05,0.07,0,0
+Bacteria,Bdellovibrionota,Bdellovibrionia,Bacteriovoracales,*Bacteriovoracaceae*,0.08,0.04,0,0
+Bacteria,Actinobacteriota,Actinobacteria,Propionibacteriales,*Nocardioidaceae*,0.04,0.04,0.02,0.02
+Bacteria,Actinobacteriota,Actinobacteria,Propionibacteriales,*Propionibacteriaceae*,0.04,0.06,0.01,0.01
+Bacteria,Bacteroidota,Bacteroidia,Bacteroidales,*Prevotellaceae*,0.06,0.04,0.01,0
+Bacteria,Acidobacteriota,Acidobacteriae,Acidobacteriae,*Acidobacteriae*,0.01,0.04,0.05,0
+Bacteria,Bacteroidota,Bacteroidia,Sphingobacteriales,*KD3-93*,0.04,0.03,0.03,0
+Bacteria,Proteobacteria,Gammaproteobacteria,Alteromonadales,*Shewanellaceae*,0.01,0,0,0.07
+Bacteria,Fusobacteriota,Fusobacteriia,Fusobacteriales,*Leptotrichiaceae*,0.07,0.02,0,0
+Bacteria,Patescibacteria,Gracilibacteria,Gracilibacteria,*Gracilibacteria*,0.05,0.02,0.01,0
+Archaea,Halobacterota,Methanosarcinia,Methanosarciniales,*Methanosarcinaceae*,0.02,0.06,0,0
+Bacteria,Proteobacteria,Alphaproteobacteria,Rickettsiales,*Family* (*of*) Rickettsiales,0.04,0.03,0.01,0
+Bacteria,Cyanobacteria,Cyanobacteriia,Cyanobacteriales,*Xenococcaceae*,0.03,0.04,0.01,0
+Bacteria,Proteobacteria,Alphaproteobacteria,Ferrovibrionales,*Ferrovibrionaceae*,0,0.02,0.04,0.02
+Bacteria,Planctomycetota,Planctomycetes,Planctomycetales,*Schlesneriaceae*,0,0.04,0.02,0.01
+Bacteria,Proteobacteria,Gammaproteobacteria,Steroidobacterales,*Steroidobacteraceae*,0,0.05,0.02,0
+Bacteria,Firmicutes,Clostridia,Oscillospirales,*Ruminococcaceae*,0.04,0.03,0,0.01
+Bacteria,Actinobacteriota,Actinobacteria,Actinomycetales,*Actinomycetaceae*,0.04,0.03,0.01,0
+Bacteria,Acidobacteriota,Vicinamibacteria,Subgroup_17,*Subgroup_17*,0,0.07,0,0
+Bacteria,Proteobacteria,Gammaproteobacteria,Burkholderiales,*Chitinibacteraceae*,0.04,0.02,0.01,0
+Bacteria,Actinobacteriota,Acidimicrobiia,Microtrichales,*Ilumatobacteraceae*,0.02,0.03,0.02,0
+Bacteria,Firmicutes,Negativicutes,Acidaminococcales,*Acidaminococcaceae*,0.04,0.03,0,0
+Bacteria,Cyanobacteria,Sericytochromatia,Sericytochromatia,*Sericytochromatia*,0.03,0.03,0.01,0
+Bacteria,Acidobacteriota,Holophagae,Holophagales,*Holophagaceae*,0.04,0.03,0,0
+Bacteria,Bdellovibrionota,Oligoflexia,053A03-B-DI-P58,*053A03-B-DI-P58*,0.04,0,0.02,0.01
+Bacteria,Firmicutes,Negativicutes,Veillonellales-Selenomonadales,*Selenomonadaceae*,0.04,0.03,0,0.01
+Bacteria,Proteobacteria,Alphaproteobacteria,Rickettsiales,*Candidatus_Hepatincola*,0.05,0.02,0,0
+Bacteria,Firmicutes,Bacilli,Entomoplasmatales,*Entomoplasmatales_Incertae_Sedis*,0.04,0.03,0,0
+Bacteria,Actinobacteriota,Actinobacteria,Corynebacteriales,*Nocardiaceae*,0.01,0.04,0,0.02
+Bacteria,Desulfobacterota,Desulfuromonadia,Bradymonadales,*Bradymonadales*,0.02,0.02,0.02,0
+Bacteria,Myxococcota,Polyangia,Polyangiales,*Phaselicystidaceae*,0.03,0.02,0.02,0
+Bacteria,Proteobacteria,Alphaproteobacteria,Defluviicoccales,*Family* (*of*) Defluviicoccales,0.01,0.02,0.01,0.02
+Bacteria,Firmicutes,Bacilli,Lactobacillales,*Enterococcaceae*,0.04,0.02,0,0
+Bacteria,Chloroflexi,Anaerolineae,RBG-13-54-9,*RBG-13-54-9*,0,0.01,0.04,0
+Bacteria,Verrucomicrobiota,Chlamydiae,Chlamydiales,*cvE6*,0.03,0.03,0,0
+Bacteria,Firmicutes,Clostridia,Clostridia,*Hungateiclostridiaceae*,0.01,0.04,0.01,0
+Bacteria,Firmicutes,Negativicutes,Veillonellales-Selenomonadales,*Sporomusaceae*,0.03,0.02,0,0.01
+Bacteria,Bacteroidota,Bacteroidia,Cytophagales,*Amoebophilaceae*,0.03,0.02,0.01,0
+Bacteria,Proteobacteria,Gammaproteobacteria,Run-SP154,*Run-SP154*,0.03,0.02,0.01,0
+Bacteria,Desulfobacterota,Desulfobulbia,Desulfobulbales,*Desulfobulbaceae*,0.01,0.03,0.01,0
+Bacteria,Proteobacteria,Gammaproteobacteria,Aeromonadales,*Family* (*of*) Aeromonadales,0.03,0.03,0,0
+Bacteria,Acidobacteriota,Blastocatellia,DS-100,*DS-100*,0,0.04,0.02,0
+Bacteria,Verrucomicrobiota,Verrucomicrobiae,Verrucomicrobiales,*Rubritaleaceae*,0.02,0.04,0,0
+Bacteria,Proteobacteria,Gammaproteobacteria,EV818SWSAP88,*EV818SWSAP88*,0,0.02,0.03,0
+Bacteria,Elusimicrobiota,Lineage_IIb,Lineage_IIb,*Lineage_IIb*,0.03,0.02,0,0
+Bacteria,Myxococcota,Polyangia,mle1-27,*mle1-27*,0,0.01,0.04,0
+Bacteria,Desulfobacterota,Desulfuromonadia,PB19,*PB19*,0.03,0.01,0.01,0
+Bacteria,Bacteroidota,Bacteroidia,Bacteroidales,*Williamwhitmaniaceae*,0.04,0.01,0,0
+Bacteria,Sumerlaeota,Sumerlaeia,Sumerlaeales,*Sumerlaeaceae*,0,0.05,0,0
+Bacteria,Firmicutes,Clostridia,Christensenellales,*Christensenellaceae*,0.02,0.02,0,0
+Bacteria,Patescibacteria,Saccharimonadia,Saccharimonadales,*LWQ8*,0.04,0,0,0
+Bacteria,Patescibacteria,Microgenomatia,Candidatus_Collierbacteria,*Candidatus_Collierbacteria*,0.03,0.01,0,0
+Archaea,Euryarchaeota,Methanobacteria,Methanobacteriales,*Methanobacteriaceae*,0.03,0.02,0,0
+Bacteria,Desulfobacterota,Class of Desulfobacterota,Order of Desulfobacterota,*Family* (*of*) Desulfobacterota,0,0.04,0,0.01
+Bacteria,Cyanobacteria,Cyanobacteriia,Cyanobacteriales,*Phormidiaceae*,0.01,0.03,0,0
+Bacteria,RCP2-54,RCP2-54,RCP2-54,*RCP2-54*,0.01,0.03,0,0
+Bacteria,Verrucomicrobiota,Kiritimatiellae,WCHB1-41,*WCHB1-41*,0.02,0.01,0.01,0
+Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,*Family* (*of*) Rhizobiales,0,0.01,0.02,0.01
+Bacteria,Proteobacteria,Gammaproteobacteria,Beggiatoales,*Beggiatoaceae*,0.04,0,0,0
+Bacteria,Acidobacteriota,Blastocatellia,11-24,*11-24*,0,0.04,0,0
+Bacteria,Proteobacteria,Alphaproteobacteria,Elsterales,*Elsteraceae*,0,0.01,0,0.02
+Bacteria,Patescibacteria,Gracilibacteria,Candidatus_Peregrinibacteria,*Candidatus_Peregrinibacteria*,0.03,0,0,0
+Bacteria,Bacteroidota,Bacteroidia,Bacteroidales,*Marinilabiliaceae*,0.03,0.01,0,0
+Bacteria,Desulfobacterota,Desulfovibrionia,Desulfovibrionales,*Desulfomicrobiaceae*,0.02,0.02,0,0
+Bacteria,Firmicutes,Bacilli,Bacillales,*Bacillaceae*,0.01,0.02,0,0
+Bacteria,Proteobacteria,Gammaproteobacteria,Burkholderiales,*B1-7BS*,0,0.03,0,0
+Bacteria,Patescibacteria,Microgenomatia,Candidatus_Woesebacteria,*Candidatus_Woesebacteria*,0.01,0.01,0,0.01
+Bacteria,Bacteroidota,Bacteroidia,Cytophagales,*Hymenobacteraceae*,0,0.02,0,0.01
+Bacteria,Firmicutes,Clostridia,Clostridiales,*Caloramatoraceae*,0.02,0.01,0,0.01
+Bacteria,LCP-89,LCP-89,LCP-89,*LCP-89*,0.03,0,0,0
+Bacteria,Acidobacteriota,Blastocatellia,Blastocatellales,*Blastocatellaceae*,0,0.01,0.02,0
+Bacteria,Proteobacteria,Gammaproteobacteria,HglApr721,*HglApr721*,0,0,0,0.03
+Bacteria,Bacteroidota,Bacteroidia,Sphingobacteriales,*CMW-169*,0.02,0.01,0,0
+Bacteria,Verrucomicrobiota,Lentisphaeria,Victivallales,*Victivallales*,0.02,0.01,0,0
+Bacteria,Armatimonadota,Armatimonadia,Armatimonadales,*Armatimonadaceae*,0.01,0,0.01,0.01
+Bacteria,Planctomycetota,BD7-11,BD7-11,*BD7-11*,0,0.02,0,0
+Bacteria,Bdellovibrionota,Oligoflexia,Silvanigrellales,*Silvanigrellaceae*,0,0.03,0,0
+Bacteria,Firmicutes,Bacilli,RF39,*RF39*,0,0.03,0,0
+Bacteria,Proteobacteria,Alphaproteobacteria,Elsterales,*Family* (*of*) Elsterales,0,0.03,0,0
+Bacteria,Acidobacteriota,Holophagae,Subgroup_7,*Subgroup_7*,0.01,0,0.01,0
+Bacteria,Proteobacteria,Gammaproteobacteria,Burkholderiales,*TRA3-20*,0.01,0,0.01,0
+Bacteria,Elusimicrobiota,Elusimicrobia,MVP-88,*MVP-88*,0.03,0,0,0
+Bacteria,Patescibacteria,Gracilibacteria,Absconditabacteriales_(SR1),*Absconditabacteriales_(SR1)*,0.01,0.01,0,0
+Bacteria,Actinobacteriota,Actinobacteria,Bifidobacteriales,*Bifidobacteriaceae*,0.01,0.02,0,0
+Bacteria,Proteobacteria,Gammaproteobacteria,Oceanospirillales,*Alcanivoracaceae*,0.01,0.02,0,0
+Bacteria,Chloroflexi,OLB14,OLB14,*OLB14*,0,0.02,0,0
+Bacteria,Actinobacteriota,Acidimicrobiia,Microtrichales,*Iamiaceae*,0,0,0.02,0
+Bacteria,Proteobacteria,Alphaproteobacteria,Dongiales,*Dongiaceae*,0,0.01,0,0.01
+Bacteria,Patescibacteria,Gracilibacteria,Candidatus_Abawacabacteria,*Candidatus_Abawacabacteria*,0.02,0,0,0
+Bacteria,Chloroflexi,Chloroflexia,Thermomicrobiales,*AKYG1722*,0.01,0,0.01,0
+Bacteria,Proteobacteria,Gammaproteobacteria,Burkholderiales,*A21b*,0,0.01,0.01,0
+Bacteria,Bacteroidota,Bacteroidia,Bacteroidales,*Marinifilaceae*,0.02,0,0,0
+Bacteria,Proteobacteria,Alphaproteobacteria,Tistrellales,*Geminicoccaceae*,0.01,0.01,0,0
+Bacteria,Actinobacteriota,Actinobacteria,Micrococcales,*Brevibacteriaceae*,0,0.02,0,0
+Bacteria,Actinobacteriota,Actinobacteria,PeM15,*PeM15*,0,0.02,0,0
+Bacteria,Dependentiae,Babeliae,Babeliales,*Babeliaceae*,0,0.02,0,0
+Bacteria,Proteobacteria,Alphaproteobacteria,NRL2,*NRL2*,0,0.02,0,0
+Bacteria,Proteobacteria,Gammaproteobacteria,Burkholderiales,*T34*,0,0,0,0.01
+Bacteria,Firmicutes,Desulfitobacteriia,Desulfitobacteriales,*Desulfitobacteriaceae*,0.01,0,0,0.01
+Bacteria,Proteobacteria,Gammaproteobacteria,EC3,*EC3*,0,0,0.02,0
+Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,*Pleomorphomonadaceae*,0,0,0,0.02
+Bacteria,Verrucomicrobiota,Chlamydiae,Chlamydiales,*Chlamydiaceae*,0.01,0,0,0
+Bacteria,Patescibacteria,Gracilibacteria,JGI_0000069-P22,*JGI_0000069-P22*,0.02,0,0,0
+Bacteria,Firmicutes,Clostridia,Clostridia,*Gracilibacteraceae*,0.01,0,0,0
+Bacteria,Bacteroidota,Bacteroidia,Cytophagales,*Cyclobacteriaceae*,0,0.01,0.01,0
+Bacteria,Bacteroidota,Bacteroidia,Cytophagales,*Family* (*of*) Cytophagales,0,0.01,0.01,0
+Bacteria,NB1-j,NB1-j,NB1-j,*NB1-j*,0,0.01,0.01,0
+Bacteria,Bacteroidota,Bacteroidia,Bacteroidales,*Muribaculaceae*,0.01,0.01,0,0
+Bacteria,Fusobacteriota,Fusobacteriia,Fusobacteriales,*Fusobacteriaceae*,0.01,0.01,0,0
+Bacteria,Proteobacteria,Gammaproteobacteria,Alteromonadales,*Psychromonadaceae*,0.01,0.01,0,0
+Bacteria,Firmicutes,Bacilli,Paenibacillales,*Paenibacillaceae*,0,0.01,0,0
+Bacteria,Dadabacteria,Dadabacteriia,Dadabacteriales,*Dadabacteriales*,0,0.02,0,0
+Bacteria,Verrucomicrobiota,Lentisphaeria,SS1-B-02-17,*SS1-B-02-17*,0,0.02,0,0
+Bacteria,Actinobacteriota,Actinobacteria,Kineosporiales,*Kineosporiaceae*,0,0,0.01,0
+Bacteria,Chloroflexi,KD4-96,KD4-96,*KD4-96*,0,0,0.01,0
+Bacteria,Bacteroidota,Bacteroidia,Bacteroidales,*Dysgonomonadaceae*,0.01,0,0,0
+Bacteria,Bacteroidota,Bacteroidia,Bacteroidales,*M2PB4-65_termite_group*,0.01,0,0,0
+Bacteria,Desulfobacterota,Syntrophia,Syntrophales,*Syntrophaceae*,0.01,0,0,0
+Bacteria,Patescibacteria,Berkelbacteria,Berkelbacteria,*Berkelbacteria*,0.01,0,0,0
+Bacteria,Verrucomicrobiota,Chlamydiae,Chlamydiales,*Criblamydiaceae*,0.01,0,0,0
+Bacteria,Actinobacteriota,Actinobacteria,Frankiales,*Sporichthyaceae*,0,0,0.01,0
+Bacteria,Armatimonadota,Class of Armatimonadota,Order of Armatimonadota,*Family* (*of*) Armatimonadota,0,0,0.01,0
+Bacteria,Firmicutes,Desulfotomaculia,Desulfotomaculales,*Desulfotomaculales*,0,0,0,0
+Bacteria,Actinobacteriota,Coriobacteriia,Coriobacteriales,*Coriobacteriaceae*,0.01,0,0,0
+Bacteria,Chloroflexi,Anaerolineae,Ardenticatenales,*Ardenticatenaceae*,0.01,0,0,0
+Bacteria,Proteobacteria,Gammaproteobacteria,Burkholderiales,*Chitinimonadaceae*,0.01,0,0,0
+Bacteria,Bacteroidota,Bacteroidia,Bacteroidales,*SB-5*,0,0.01,0,0
+Bacteria,Firmicutes,Clostridia,Order of Clostridia,*Family* (*of*) Clostridia,0,0.01,0,0
+Bacteria,Actinobacteriota,Actinobacteria,Micrococcales,*Family* (*of*) Micrococcales,0,0.01,0,0
+Bacteria,Firmicutes,Negativicutes,Veillonellales-Selenomonadales,*Veillonellaceae*,0,0.01,0,0
+Bacteria,Firmicutes,Class of Firmicutes,Order of Firmicutes,*Family* (*of*) Firmicutes,0,0,0,0.01
+Bacteria,Proteobacteria,Alphaproteobacteria,Azospirillales,*Azospirillaceae*,0,0,0,0.01
+Bacteria,Acidobacteriota,Acidobacteriae,Elev-16S-1166,*Elev-16S-1166*,0,0.01,0,0
+Bacteria,Actinobacteriota,Actinobacteria,Pseudonocardiales,*Pseudonocardiaceae*,0,0.01,0,0
+Bacteria,Actinobacteriota,Thermoleophilia,Solirubrobacterales,*Solirubrobacteraceae*,0,0.01,0,0
+Bacteria,Bacteroidota,Bacteroidia,Sphingobacteriales,*FFCH9454*,0,0.01,0,0
+Bacteria,Campilobacterota,Campylobacteria,Campylobacterales,*Sulfurospirillaceae*,0,0.01,0,0
+Bacteria,Desulfobacterota,Desulfobacteria,Desulfobacterales,*Desulforegulaceae*,0,0.01,0,0
+Bacteria,Firmicutes,Clostridia,Clostridiales,*Oxobacteraceae*,0,0.01,0,0
+Bacteria,Firmicutes,Clostridia,Eubacteriales,*Eubacteriaceae*,0,0.01,0,0
+Bacteria,Myxococcota,bacteriap25,bacteriap25,*bacteriap25*,0,0.01,0,0
+Bacteria,Planctomycetota,028H05-P-BN-P5,028H05-P-BN-P5,*028H05-P-BN-P5*,0,0.01,0,0
+Bacteria,Proteobacteria,Gammaproteobacteria,Arenicellales,*Arenicellaceae*,0,0.01,0,0
+Bacteria,Proteobacteria,Gammaproteobacteria,Chromatiales,*Chromatiaceae*,0,0.01,0,0
+Bacteria,Chloroflexi,Anaerolineae,SBR1031,*SBR1031*,0,0,0.01,0
+Bacteria,Cyanobacteria,Vampirivibrionia,Caenarcaniphilales,*Caenarcaniphilales*,0,0,0.01,0
+Bacteria,Bacteroidota,Bacteroidia,Sphingobacteriales,*ST-12K33*,0.01,0,0,0
+Bacteria,Firmicutes,Bacilli,Lactobacillales,*Streptococcaceae*,0.01,0,0,0
+Bacteria,Firmicutes,Clostridia,Oscillospirales,*[Eubacterium]_coprostanoligenes_group*,0.01,0,0,0
+Bacteria,Firmicutes,Clostridia,Peptostreptococcales-Tissierellales,*Anaerovoracaceae*,0.01,0,0,0
+Bacteria,Myxococcota,Polyangia,Order of Polyangia,*Family* (*of*) Polyangia,0.01,0,0,0
+Bacteria,Myxococcota,Polyangia,Polyangiales,*BIrii41*,0.01,0,0,0
+Bacteria,Patescibacteria,CPR2,CPR2,*CPR2*,0.01,0,0,0
+Bacteria,Patescibacteria,Parcubacteria,Candidatus_Lloydbacteria,*Candidatus_Lloydbacteria*,0.01,0,0,0
+Bacteria,Spirochaetota,MVP-15,MVP-15,*MVP-15*,0.01,0,0,0
+Bacteria,Spirochaetota,Spirochaetia,Spirochaetales,*Spirochaetaceae*,0.01,0,0,0
+Bacteria,Firmicutes,Clostridia,Peptostreptococcales-Tissierellales,*Fusibacteraceae*,0,0,0,0
+Bacteria,Proteobacteria,Alphaproteobacteria,Rhizobiales,*Labraceae*,0,0,0,0
+Archaea,Nanoarchaeota,Nanoarchaeia,Woesearchaeales,*SCGC_AAA011-D5*,0,0.01,0,0
+Bacteria,Bacteroidota,Bacteroidia,Bacteroidales,*ML635J-40_aquatic_group*,0,0.01,0,0
+Bacteria,Bacteroidota,Bacteroidia,Bacteroidetes_VC2.1_Bac22,*Bacteroidetes_VC2.1_Bac22*,0,0.01,0,0
+Bacteria,Cyanobacteria,Vampirivibrionia,Vampirovibrionales,*Vampirovibrionaceae*,0,0.01,0,0
+Bacteria,Fibrobacterota,Chitinivibrionia,Chitinivibrionales,*Chitinivibrionaceae*,0,0.01,0,0
+Bacteria,Firmicutes,Clostridia,Caldicoprobacterales,*Caldicoprobacteraceae*,0,0.01,0,0
+Bacteria,Firmicutes,Symbiobacteriia,Symbiobacteriales,*Symbiobacteraceae*,0,0.01,0,0
+Bacteria,Planctomycetota,Planctomycetes,Order of Planctomycetes,*Family* (*of*) Planctomycetes,0,0.01,0,0
+Bacteria,Proteobacteria,Alphaproteobacteria,Defluviicoccales,*Defluviicoccaceae*,0,0.01,0,0
+Bacteria,Proteobacteria,Gammaproteobacteria,Francisellales,*Francisellaceae*,0,0.01,0,0
+Bacteria,Proteobacteria,Gammaproteobacteria,Tenderiales,*Tenderiaceae*,0,0.01,0,0
+Bacteria,Verrucomicrobiota,Verrucomicrobiae,Methylacidiphilales,*Methylacidiphilaceae*,0,0.01,0,0
+Bacteria,Cyanobacteria,Cyanobacteriia,Cyanobacteriales,*Chroococcidiopsaceae*,0,0,0,0.01
+Bacteria,Bacteroidota,Bacteroidia,Flavobacteriales,*Cryomorphaceae*,0,0,0,0
+Bacteria,Bacteroidota,Bacteroidia,Bacteroidales,*Family* (*of*) Bacteroidales,0,0,0,0
+Bacteria,Cyanobacteria,Cyanobacteriia,Limnotrichales,*Limnotrichaceae*,0,0,0,0
+Bacteria,Firmicutes,Bacilli,Erysipelotrichales,*Erysipelatoclostridiaceae*,0,0,0,0
+Bacteria,Firmicutes,Bacilli,Izemoplasmatales,*Izemoplasmataceae*,0,0,0,0
+Bacteria,Firmicutes,Clostridia,Clostridia_UCG-014,*Clostridia_UCG-014*,0,0,0,0
+Bacteria,Firmicutes,Clostridia,Peptostreptococcales-Tissierellales,*Sedimentibacteraceae*,0,0,0,0
+Bacteria,Modulibacteria,Moduliflexia,Moduliflexales,*Moduliflexaceae*,0,0,0,0
+Bacteria,Patescibacteria,Parcubacteria,Candidatus_Jorgensenbacteria,*Candidatus_Jorgensenbacteria*,0,0,0,0
+Bacteria,Planctomycetota,vadinHA49,vadinHA49,*vadinHA49*,0,0,0,0
+Bacteria,Proteobacteria,Gammaproteobacteria,Burkholderiales,*Chromobacteriaceae*,0,0,0,0
+Bacteria,Proteobacteria,Gammaproteobacteria,Enterobacterales,*Family* (*of*) Enterobacterales,0,0,0,0
+Bacteria,Acidobacteriota,Acidobacteriae,Order of Acidobacteriae,*Family* (*of*) Acidobacteriae,0,0,0,0
+Bacteria,Armatimonadota,Fimbriimonadia,Fimbriimonadales,*Fimbriimonadaceae*,0,0,0,0
+Bacteria,Chloroflexi,Anaerolineae,SBR1031,*Family* (*of*) SBR1031,0,0,0,0
+Bacteria,Chloroflexi,Chloroflexia,Chloroflexales,*Chloroflexaceae*,0,0,0,0
+Bacteria,Chloroflexi,Chloroflexia,Chloroflexales,*Roseiflexaceae*,0,0,0,0
+Bacteria,Dependentiae,Babeliae,Babeliales,*Family* (*of*) Babeliales,0,0,0,0
+Bacteria,Firmicutes,Clostridia,Oscillospirales,*Family* (*of*) Oscillospirales,0,0,0,0
+Bacteria,Firmicutes,Clostridia,Peptococcales,*Peptococcaceae*,0,0,0,0
+Bacteria,Firmicutes,Clostridia,Peptostreptococcales-Tissierellales,*Acidaminobacteraceae*,0,0,0,0
+Bacteria,Firmicutes,Syntrophomonadia,Syntrophomonadales,*Syntrophomonadaceae*,0,0,0,0
+Bacteria,Proteobacteria,Alphaproteobacteria,Kiloniellales,*Fodinicurvataceae*,0,0,0,0
+Bacteria,Proteobacteria,Gammaproteobacteria,Burkholderiales,*SC-I-84*,0,0,0,0

@@ -1,0 +1,7 @@
+"BarcodeSequence","LinkerPrimerSequence","BarcodeName","ReversePrimer","ProjectName","Description","sample_or_control","treatment","timepoint","DNA_Concentration","sample_volume_ml","na_type","replicate","experiment_type","cells_per_ml","read_count","sampleid","is.neg","Observed","Chao1","se.chao1","Shannon","Simpson"
+"TCCGGCCG","GTGYCAGCMGCCGCGGTAA","illCus515bar1","CCGYCAATTYMTTTRAGTTT","081524PVlee926R","ABOR.S006","sample","Untreated",0,0.27,200,"dna",1,"lab ",412.1766467,287768,"Sample.01",FALSE,115,115,0,3.02,0.92
+"TCCGGTAA","GTGYCAGCMGCCGCGGTAA","illCus515bar2","CCGYCAATTYMTTTRAGTTT","081524PVlee926R","ABOR.S015","sample","Untreated",3,0.42,50,"dna",1,"lab ",2759.246307,302013,"Sample.02",FALSE,59,59,0,0.6,0.18
+"TCCGTCGG","GTGYCAGCMGCCGCGGTAA","illCus515bar3","CCGYCAATTYMTTTRAGTTT","081524PVlee926R","ABOR.S017","sample","Treatment.01",3,2.7,50,"dna",1,"lab ",8728.143713,344938,"Sample.03",FALSE,50,50,0,0.4,0.12
+"TCCGTCTT","GTGYCAGCMGCCGCGGTAA","illCus515bar4","CCGYCAATTYMTTTRAGTTT","081524PVlee926R","ABOR.S019","sample","Treatment.02",3,8.1,50,"dna",1,"lab ",17111.582835,356061,"Sample.04",FALSE,45,45,0,0.14,0.04
+"TCCGTGCG","GTGYCAGCMGCCGCGGTAA","illCus515bar5","CCGYCAATTYMTTTRAGTTT","081524PVlee926R","ABOR.S021","sample","Treatment.03",3,1.5,50,"dna",1,"lab ",5257.684631,281611,"Sample.05",FALSE,49,49,0,0.33,0.1
+"TCCGTGCT","GTGYCAGCMGCCGCGGTAA","illCus515bar6","CCGYCAATTYMTTTRAGTTT","081524PVlee926R","ABOR.S023","sample","Treatment.04",3,1.66,50,"dna",1,"lab ",5582.035928,344417,"Sample.06",FALSE,49,49,0,0.26,0.07

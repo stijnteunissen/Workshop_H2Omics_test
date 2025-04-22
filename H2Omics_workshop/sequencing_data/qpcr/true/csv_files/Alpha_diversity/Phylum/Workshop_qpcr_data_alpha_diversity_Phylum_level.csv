@@ -1,0 +1,5 @@
+"BarcodeSequence","LinkerPrimerSequence","BarcodeName","ReversePrimer","ProjectName","sample_or_control","DNA_Concentration","na_type","exp_id","treatment","dna_type","timepoint","sq_calc_mean","read_count","sampleid","is.neg","Observed","Chao1","se.chao1","Shannon","Simpson"
+"TCCTTCCA","GTGYCAGCMGCCGCGGTAA","illCus515bar15","CCGYCAATTYMTTTRAGTTT","061324PV1lee926R","sample",6,"dna","exp_2","Untreated_water","idna",0,20522496.45,90276,"Sample.01",FALSE,30,30,0,1.72,0.72
+"TCCTTGGT","GTGYCAGCMGCCGCGGTAA","illCus515bar17","CCGYCAATTYMTTTRAGTTT","061324PV1lee926R","sample",6,"dna","exp_2","Treated_water","idna",0,9993733.075,94674,"Sample.02",FALSE,32,32,0,1.86,0.73
+"TCGAAGAG","GTGYCAGCMGCCGCGGTAA","illCus515bar20","CCGYCAATTYMTTTRAGTTT","061324PV1lee926R","sample",6,"dna","exp_2","Untreated_water","idna",3,15368914.47,65976,"Sample.03",FALSE,23,23,0,1.6,0.69
+"TCGACAAC","GTGYCAGCMGCCGCGGTAA","illCus515bar22","CCGYCAATTYMTTTRAGTTT","061324PV1lee926R","sample",6,"dna","exp_2","Treated_water","idna",3,15102704.22,53035,"Sample.04",FALSE,20,20,0,0.89,0.43

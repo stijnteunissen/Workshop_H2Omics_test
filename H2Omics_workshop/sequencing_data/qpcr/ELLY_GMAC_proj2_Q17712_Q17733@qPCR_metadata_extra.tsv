@@ -1,13 +1,7 @@
-SampleID	sample_or_control	DNA_Concentration	na_type	exp_id	sample_type	dna_type	regrowth_day	pma
-ELLY27.29	sample	6	dna	exp_2	effluent	idna	0	pma
-ELLY31.33	sample	6	dna	exp_2	ozonated	idna	0	pma
-ELLY36.38	sample	6	dna	exp_2	effluent	idna	3	pma
-ELLY40.42	sample	6	dna	exp_2	ozonated	idna	3	pma
-ELLY52.54	sample	6	dna	exp_3	effluent	idna	0	pma
-ELLY56.58	sample	6	dna	exp_3	ozonated	idna	0	pma
-ELLY61.63	sample	6	dna	exp_3	effluent	idna	3	pma
-ELLY65.67	sample	6	dna	exp_3	ozonated	idna	3	pma
-ELLY09	blank	0.00001	NA	NA	NA	NA	NA	NA
-ELLY34	blank	2.43	NA	NA	NA	NA	NA	NA
-ELLY59	blank	0.00001	NA	NA	NA	NA	NA	NA
-ELLY76	mock	6	NA	NA	NA	NA	NA	NA
+SampleID	sample_or_control	DNA_Concentration	na_type	exp_id	treatment	dna_type	timepoint
+Sample.01	sample	6	dna	exp_2	Untreated_water	idna	0
+Sample.02	sample	6	dna	exp_2	Treated_water	idna	0
+Sample.03	sample	6	dna	exp_2	Untreated_water	idna	3
+Sample.04	sample	6	dna	exp_2	Treated_water	idna	3
+Sample.blank	blank	0.00001	NA	NA	NA	NA	NA
+Sample.mock	mock	6	NA	NA	NA	NA	NA
