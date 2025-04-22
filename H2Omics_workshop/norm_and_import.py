@@ -23,6 +23,7 @@ def norm_and_import():
         # Assign norm_method to R
         norm_method = norm_dropdown.value
         ro.r.assign("norm_method", norm_method)
+        ro.r.assign("copy_correction", ro.BoolVector([True]))
         print("Normalization method assigned to R:", norm_method)
 
         # Set present_variable_factors based on method
