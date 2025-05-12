@@ -1,98 +1,148 @@
+import os
+import shutil
 import ipywidgets as widgets
-from IPython.display import display, clear_output
+from IPython.display import display
 import rpy2.robjects as ro
-from rpy2.robjects import StrVector, BoolVector
 
-# Container for entering multiple present_variable_factors
-present_var_container = widgets.VBox()
-add_button = widgets.Button(description="Add factor")
-continue_button = widgets.Button(description="Continue")
-
-# When “Add factor” is clicked, append a new Text widget
-def add_factor(_):
-    new_field = widgets.Text(placeholder="Enter factor")
-    present_var_container.children += (new_field,)
-
-add_button.on_click(add_factor)
-
-# Display UI for factors
-display(widgets.HTML("<b>Enter your present_variable_factors:</b>"))
-display(present_var_container, widgets.HBox([add_button, continue_button]))
-
-# After clicking “Continue”, lock factor entry and show the rest
-def on_continue(_):
-    add_button.disabled = True
-    continue_button.disabled = True
+def starting_project():
+    # Define the main directory as in the original R script
+    main_dir = "drive/MyDrive/H2Omics_data_analysis"
     
-    # Gather non-empty factors
-    factors = [f.value for f in present_var_container.children if f.value.strip()]
+    # Create the main folder if it does not exist
+    if not os.path.exists(main_dir):
+        os.makedirs(main_dir)
+        print("Main folder 'H2Omics_data_analysis' created.")
+    else:
+        print("Main folder 'H2Omics_data_analysis' already exists.")
     
-    # Dropdown for normalization method
-    norm_dropdown = widgets.Dropdown(
-        options=["qpcr", "fcm", "NULL"],
-        description="Norm method:"
+    # Find existing project folders (directly under main_dir)
+    existing_projects = [d for d in os.listdir(main_dir) if os.path.isdir(os.path.join(main_dir, d))]
+    
+    # Set up options for the dropdown
+    if not existing_projects:
+        start_new_project = True
+        options = ["Start new project"]
+    else:
+        start_new_project = False
+        options = existing_projects + ["Start new project"]
+    
+    # Widgets for project selection and creation
+    project_dropdown = widgets.Dropdown(
+        options=options,
+        description="Project:"
     )
-    # Checkboxes for blank and mock samples
-    blank_checkbox = widgets.Checkbox(description="Blank = TRUE", value=True)
-    mock_checkbox  = widgets.Checkbox(description="Mock = TRUE", value=False)
-    
-    # Dropdown for sample matrix type
-    sample_dropdown = widgets.Dropdown(
-        options=["liquid", "solid"],
-        description="Sample matrix:"
+    new_project_text = widgets.Text(
+        description="New Project Name:",
+        placeholder="Enter project name"
     )
+    confirm_button = widgets.Button(description="Confirm Project")
+    output = widgets.Output()
     
-    # Dropdowns for aesthetic mappings (choose one factor or NULL)
-    aesthetic_options = ["NULL"] + factors
-    color_dropdown = widgets.Dropdown(options=aesthetic_options, description="Color factor:")
-    shape_dropdown = widgets.Dropdown(options=aesthetic_options, description="Shape factor:")
-    size_dropdown  = widgets.Dropdown(options=aesthetic_options, description="Size factor:")
-    alpha_dropdown = widgets.Dropdown(options=aesthetic_options, description="Alpha factor:")
+    # Function to create the project structure (similar to create_project_structure in R)
+    def create_project_structure(project_name, base_folder):
+        # Path to the r_visualisation folder
+        r_vis_path = os.path.join(base_folder, "r_visualisation")
+        # Path to the project folder inside r_visualisation
+        project_path = os.path.join(r_vis_path, project_name)
+        # Path to the qiime2_output folder
+        qiime2_output_path = os.path.join(project_path, "qiime2_output")
+        
+        # Create the r_visualisation folder if it doesn't exist
+        if not os.path.exists(r_vis_path):
+            os.makedirs(r_vis_path)
+            print(f"Folder 'r_visualisation' created in {base_folder}.")
+        else:
+            print(f"Folder 'r_visualisation' already exists in {base_folder}.")
+        
+        # Create the project folder and the qiime2_output subfolder
+        if not os.path.exists(project_path):
+            os.makedirs(project_path)
+            print(f"Project folder '{project_name}' created in r_visualisation.")
+        else:
+            print(f"Project folder '{project_name}' already exists in r_visualisation.")
+        
+        if not os.path.exists(qiime2_output_path):
+            os.makedirs(qiime2_output_path)
+            print(f"Folder 'qiime2_output' created in {project_path}.")
+        else:
+            print(f"Folder 'qiime2_output' already exists in {project_path}.")
+        
+        # Ensure that r_vis_path ends with an os.sep (e.g., '/')
+        base_path = r_vis_path if r_vis_path.endswith(os.sep) else r_vis_path + os.sep
+        return project_path, base_path, qiime2_output_path
+
+    # Function to show/hide widgets depending on the selection
+    def on_project_change(change):
+        if change['new'] == "Start new project":
+            new_project_text.layout.display = 'block'
+        else:
+            new_project_text.layout.display = 'none'
     
-    run_button = widgets.Button(description="Run R")
-    output_area = widgets.Output()
+    if not start_new_project:
+        project_dropdown.observe(on_project_change, names="value")
     
-    # Show the remaining controls
-    display(widgets.HTML("<hr><b>Choose additional parameters:</b>"))
-    display(norm_dropdown, blank_checkbox, mock_checkbox,
-            sample_dropdown, color_dropdown, shape_dropdown,
-            size_dropdown, alpha_dropdown, run_button, output_area)
+    new_project_text.layout.display = 'block' if start_new_project else 'none'
     
-    # When “Run R” is clicked, assign each variable into R
-    def run_r(_):
-        with output_area:
-            clear_output()
-            
-            # Assign the vector of factors
-            ro.r.assign("present_variable_factors", StrVector(factors))
-            
-            # Handle norm_method: convert NULL→"raw"
-            nm = norm_dropdown.value
-            ro.r.assign("norm_method", StrVector([nm if nm!="NULL" else "raw"]))
-            
-            # Assign blank & mock as logical scalars
-            ro.r.assign("blank", BoolVector([blank_checkbox.value]))
-            ro.r.assign("mock",  BoolVector([mock_checkbox.value]))
-            
-            # Assign sample matrix
-            ro.r.assign("sample_matrix", StrVector([sample_dropdown.value]))
-            
-            # Helper to assign aesthetics or set to NULL
-            def assign_aesthetic(name, widget):
-                if widget.value == "NULL":
-                    ro.r(f"{name} <- NULL")
+    # Handle the confirmation button click
+    def on_confirm_clicked(b):
+        with output:
+            output.clear_output()
+            # If there are no existing projects or "Start new project" is chosen:
+            if start_new_project or project_dropdown.value == "Start new project":
+                project_name = new_project_text.value.strip()
+                if project_name == "":
+                    print("Please enter a project name.")
+                    return
+                project_folder = os.path.join(main_dir, project_name)
+                if not os.path.exists(project_folder):
+                    os.makedirs(project_folder)
+                    print(f"New project folder '{project_name}' created in the main folder.")
                 else:
-                    ro.r.assign(name, StrVector([widget.value]))
+                    print(f"Project folder '{project_name}' already exists. Continuing with the existing folder.")
+            else:
+                project_name = project_dropdown.value
+                project_folder = os.path.join(main_dir, project_name)
+                print(f"Using existing project folder: {project_name}")
             
-            assign_aesthetic("color_factor",  color_dropdown)
-            assign_aesthetic("shape_factor",  shape_dropdown)
-            assign_aesthetic("size_factor",   size_dropdown)
-            assign_aesthetic("alpha_factor",  alpha_dropdown)
+            # Create the project structure
+            project_path, base_path, qiime2_output_path = create_project_structure(project_name, project_folder)
             
-            print("✅ All parameters have been assigned individually in R.")
-            # Optional: show one of them in output
-            print("present_variable_factors in R:", ro.r.get("present_variable_factors"))
+            # If an existing project is chosen, try copying files from the 'qiime_anlayseis/output' folder
+            if not start_new_project and project_dropdown.value != "Start new project":
+                source_path = os.path.join(project_folder, "qiime_anlayseis", "output")
+                if os.path.exists(source_path):
+                    files_to_copy = os.listdir(source_path)
+                    for item in files_to_copy:
+                        s = os.path.join(source_path, item)
+                        d = os.path.join(qiime2_output_path, item)
+                        try:
+                            if os.path.isdir(s):
+                                shutil.copytree(s, d, dirs_exist_ok=True)
+                            else:
+                                shutil.copy2(s, d)
+                        except Exception as e:
+                            print(f"Error copying {s} to {d}: {e}")
+                    print(f"Files copied from {source_path} to {qiime2_output_path}.")
+                else:
+                    print(f"Source folder '{source_path}' does not exist.")
+            else:
+                # For a new project: provide instructions for file uploading
+                print("Now upload files to the folder:")
+                print(qiime2_output_path)
+                print("For uploading, use the provided Python snippet in the next cell.")
+            
+            # Display project information
+            print("Project name (projects):", project_name)
+            print("Base path to r_visualisation:", base_path)
+            
+            # Assign the variables to the R environment via rpy2
+            ro.r.assign("projects", project_name)
+            ro.r.assign("base_path", base_path)
+            print("Variables assigned to R.")
     
-    run_button.on_click(run_r)
-
-continue_button.on_click(on_continue)
+    confirm_button.on_click(on_confirm_clicked)
+    
+    # Display the widgets
+    if not start_new_project:
+        display(project_dropdown)
+    display(new_project_text, confirm_button, output)
