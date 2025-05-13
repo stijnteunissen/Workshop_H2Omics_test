@@ -1,0 +1,77 @@
+analyzeResidualErrorByPPplot
+                        Analyze quality of uncertainty in ancestral or
+                        hidden state prediction
+calculate_CI_from_error_distribution
+                        Get confidence interval for ancestral or hidden
+                        states
+calculate_error_mean_and_var
+                        Calculate the mean and variance of an error
+                        distribution
+calculate_R2cv          Calculating coefficient of determination
+calculateBinomRSS       Calculate RSS
+calculateHeteroscedasticity
+                        Calculate median Chi-square
+compoundNormalMoments   Calculate four central moments of a mixture of
+                        normal distributions
+continuousAceByPIC      Predict global ancestral state under the BM
+                        model
+crossValidationWithPE   Leave-one-out cross-validation under pulsed
+                        evolution model
+discretizeResult        Discretize result
+dMixNormal              Probability functions of mixture of normal
+                        distributions
+dPEpoisnorm             Probability functions of trait change under
+                        pulsed evolution with 1 compound Poisson
+                        process
+F_beta_score            Calculating recall, precision and F score
+findBestNormalApproximation1
+                        Find approximation for a mixture of normal
+                        distributions using limited number of normal
+                        distributions
+findEdges               Find the edges/nodes connected to a node
+findSisters             Find the sister nodes/tips of a node/tip
+findTerminalPIC         Find only tip-pair contrasts in a tree
+fit.model.byNM.2step    Wrapper function for optimization
+fitPE                   Fit pulsed evolution model
+fullMarginalReconstructionWithPE
+                        Reconstruct all marginal ancestral state in a
+                        phylogeny
+get.params              Get a component of the fitted model
+getLatestAncestor       Find the ancestor of a node or tip
+getNextDescendants      Find the descendants of a node
+getRoot                 Find the root of a phylogeny
+globalReconstructionWithPE
+                        Predict global ancestral state under the pulsed
+                        evolution model
+initialize.parameters.SP
+                        Prepare model parameters for optimization
+locate_query_sequences
+                        Locate query sequences
+logitSigmoid            Shift the center of deviations to a probability
+LOO_CV_with_BM          Leave-one-out cross-validation under BM model
+make_traceable_edge_label
+                        Calculating traceable node labels
+marginalReconstruction
+                        Reconstruct marginal ancestral state from a
+                        node's immediate descendants
+mix_errors_by_weight    Mix error distributions
+partition_test_set_with_minimum_distance
+                        Partition test set from reference data
+predictHiddenStateWithPE
+                        Predict hidden state under the PE model
+predTraitByPIC          Predict hidden state under the BM model
+productNormalDensity    Calculate the product of normal probability
+                        density functions
+pseudo.pic              Calculate pseudo-PIC
+pseudo.Z.score          Calculate pseudo-Z-score
+reconstructAncestralStates
+                        Reconstruct ancestral states under BM and
+                        time-independent variation
+reroot_tree_at_tip      Root the phylogeny at a tip
+simulatePET             Simulate trait under pulsed evolution
+sort_and_digest         Calculating the MD5 sum of an unordered
+                        character vector
+summarize.model.parameter
+                        Summarize fitted model
+total.process.variance
+                        Total evolution rate

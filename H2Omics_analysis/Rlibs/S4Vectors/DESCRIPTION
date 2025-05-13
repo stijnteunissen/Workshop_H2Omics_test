@@ -12,7 +12,7 @@ Description: The S4Vectors package defines the Vector and List virtual classes
 biocViews: Infrastructure, DataRepresentation
 URL: https://bioconductor.org/packages/S4Vectors
 BugReports: https://github.com/Bioconductor/S4Vectors/issues
-Version: 0.44.0
+Version: 0.46.0
 License: Artistic-2.0
 Encoding: UTF-8
 Authors@R: c(
@@ -24,7 +24,7 @@ Authors@R: c(
 	person("Beryl", "Kanali", role="ctb",
 		comment="Converted vignettes from Sweave to RMarkdown"))
 Depends: R (>= 4.0.0), methods, utils, stats, stats4, BiocGenerics (>=
-        0.37.0)
+        0.53.2)
 Suggests: IRanges, GenomicRanges, SummarizedExperiment, Matrix,
         DelayedArray, ShortRead, graph, data.table, RUnit, BiocStyle,
         knitr
@@ -43,17 +43,17 @@ Collate: S4-utils.R show-utils.R utils.R normarg-utils.R bindROWS.R
         Pairs-class.R FilterRules-class.R stack-methods.R
         expand-methods.R aggregate-methods.R shiftApply-methods.R zzz.R
 git_url: https://git.bioconductor.org/packages/S4Vectors
-git_branch: RELEASE_3_20
-git_last_commit: 79c3948
-git_last_commit_date: 2024-10-29
-Repository: Bioconductor 3.20
-Date/Publication: 2024-10-29
+git_branch: RELEASE_3_21
+git_last_commit: f4a665d
+git_last_commit_date: 2025-04-15
+Repository: Bioconductor 3.21
+Date/Publication: 2025-04-15
 NeedsCompilation: yes
-Packaged: 2024-10-30 02:36:31 UTC; biocbuild
+Packaged: 2025-04-16 00:11:48 UTC; biocbuild
 Author: Hervé Pagès [aut, cre],
   Michael Lawrence [aut],
   Patrick Aboyoun [aut],
   Aaron Lun [ctb],
   Beryl Kanali [ctb] (Converted vignettes from Sweave to RMarkdown)
 Maintainer: Hervé Pagès <hpages.on.github@gmail.com>
-Built: R 4.4.3; x86_64-pc-linux-gnu; 2025-04-08 12:27:45 UTC; unix
+Built: R 4.5.0; x86_64-pc-linux-gnu; 2025-05-13 08:01:52 UTC; unix
