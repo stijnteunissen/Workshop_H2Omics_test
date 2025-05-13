@@ -14,7 +14,9 @@ def analysis_options():
         factor_container.children += (
             widgets.Text(
                 description="Factor:",
-                placeholder="Enter factor"
+                placeholder="Enter factor",
+                style={'description_width': 'initial'},
+                layout=widgets.Layout(width='max-content')
             ),
         )
     add_factor_button.on_click(_add_factor)
@@ -31,43 +33,64 @@ def analysis_options():
         # collect non‐empty factors
         factors = [w.value for w in factor_container.children if w.value.strip()]
 
+        dropdown_layout = widgets.Layout(width='max-content')
+        label_style = {'description_width': 'initial'}
+
         # normalization method dropdown
         norm_dropdown = widgets.Dropdown(
             options=["qpcr", "fcm", "NULL"],
-            description="Norm method:"
+            description="Normalization method:",
+            layout=dropdown_layout,
+            style=label_style
         )
 
         # blank / mock checkboxes
         blank_dropdown = widgets.Dropdown(
             options=["TRUE", "FALSE"],
-            description="Blank:")
+            description="Is blank?",
+            layout=dropdown_layout,
+            style=label_style
+        )
         mock_dropdown = widgets.Dropdown(
             options=["TRUE", "FALSE"],
-            description="Mock:")
+            description="Is mock?",
+            layout=dropdown_layout,
+            style=label_style
+        )
 
         # sample matrix dropdown
         sample_dropdown = widgets.Dropdown(
             options=["liquid", "solid"],
-            description="Sample matrix:"
+            description="Sample matrix:",
+            layout=dropdown_layout,
+            style=label_style
         )
 
         # aesthetic mapping dropdowns from factors or NULL
         aesthetic_opts = ["NULL"] + factors
         color_dropdown = widgets.Dropdown(
             options=aesthetic_opts,
-            description="Color factor:"
+            description="Color mapping:",
+            layout=dropdown_layout,
+            style=label_style
         )
         shape_dropdown = widgets.Dropdown(
             options=aesthetic_opts,
-            description="Shape factor:"
+            description="Shape mapping:",
+            layout=dropdown_layout,
+            style=label_style
         )
         size_dropdown = widgets.Dropdown(
             options=aesthetic_opts,
-            description="Size factor:"
+            description="Size mapping:",
+            layout=dropdown_layout,
+            style=label_style
         )
         alpha_dropdown = widgets.Dropdown(
             options=aesthetic_opts,
-            description="Alpha factor:"
+            description="Alpha mapping:",
+            layout=dropdown_layout,
+            style=label_style
         )
 
         # final confirmation button and output area
