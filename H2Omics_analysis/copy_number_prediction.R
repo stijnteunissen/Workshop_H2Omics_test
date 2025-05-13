@@ -9,7 +9,7 @@ dir.create(temp_dir)
 utils::unzip(qza_file, exdir = temp_dir)
 
 # Find the FASTA file that ends with "dna-sequence.FASTA"
-fasta_file = list.files(file.path(temp_dir, "data"), pattern = "dna-sequences\\.fasta$", full.names = TRUE)
+fasta_file = list.files(path = temp_dir, pattern = "dna-sequences\\.fasta$", full.names = TRUE, recursive = TRUE)
 #fasta_file <- list.files(qiime_output_dir, pattern = "dna-sequences\\.fasta$", full.names = TRUE)[1]
 if (is.na(fasta_file)) stop("No FASTA file found in ", qiime_output_dir)
 
