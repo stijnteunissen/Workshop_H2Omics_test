@@ -59,14 +59,6 @@ def analysis_options():
             style=label_style
         )
 
-        # sample matrix dropdown
-        sample_dropdown = widgets.Dropdown(
-            options=["liquid", "solid"],
-            description="Sample matrix:",
-            layout=dropdown_layout,
-            style=label_style
-        )
-
         # aesthetic mapping dropdowns
         aesthetic_opts = ["NULL"] + factors
         color_dropdown = widgets.Dropdown(
@@ -100,7 +92,6 @@ def analysis_options():
                 norm_dropdown,
                 blank_dropdown,
                 mock_dropdown,
-                sample_dropdown,
                 color_dropdown,
                 shape_dropdown,
                 size_dropdown,
@@ -129,8 +120,6 @@ def analysis_options():
                 # assign blank and mock as logicals
                 ro.r.assign("blank", BoolVector([blank_dropdown.value == "TRUE"]))
                 ro.r.assign("mock",  BoolVector([mock_dropdown.value  == "TRUE"]))
-                # assign sample matrix
-                ro.r.assign("sample_matrix", sample_dropdown.value)
                 # assign aesthetics or NULL
                 for name, widget in [
                     ("color_factor",  color_dropdown),
