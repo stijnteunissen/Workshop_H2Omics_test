@@ -1,4 +1,5 @@
 install_packages <- function() {
+  options(getClass.msg = FALSE)
   # Define the custom library folder on your Google Drive for phyloseq
   drive_lib <- "/content/drive/MyDrive/Rlibs" # "/content/Workshop_H2Omics_test/H2Omics_analysis/Rlibs"
   if (!dir.exists(drive_lib)) {
@@ -200,11 +201,6 @@ install_packages <- function() {
   }
   suppressMessages(library(qiime2R))
 
-  if (!requireNamespace("tidyverse", quietly = TRUE)) {
-    devtools::install_github("tidyverse", quiet = TRUE)
-  }
-  suppressMessages(library(tidyverse))
-
   if (!requireNamespace("RasperGade", quietly = TRUE)) {
     devtools::install_github(repo = "wu-lab-uva/RasperGade", quiet = TRUE)
   }
@@ -214,6 +210,11 @@ install_packages <- function() {
     devtools::install_github(repo = "wu-lab-uva/RasperGade16S", quiet = TRUE)
   }
   suppressMessages(library(RasperGade16S))
+
+  if (!requireNamespace("tidyverse", quietly = TRUE)) {
+    devtools::install_github("tidyverse", quiet = TRUE)
+  }
+  suppressMessages(library(tidyverse))
 
   message("All packages have been installed and loaded.")
 }
