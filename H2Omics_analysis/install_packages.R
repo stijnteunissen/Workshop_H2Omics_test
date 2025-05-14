@@ -16,12 +16,6 @@ install_packages <- function() {
   }
   suppressMessages(library(BiocManager, lib.loc = drive_lib))
 
-  # Install phyloseq in the drive library if not already installed there
-  if (!requireNamespace("phyloseq", quietly = TRUE, lib.loc = drive_lib)) {
-    suppressMessages(BiocManager::install("phyloseq", lib = drive_lib, quiet = TRUE, update = TRUE, ask = FALSE))
-  }
-  suppressMessages(library(phyloseq, lib.loc = drive_lib))
-
   if (!requireNamespace("decontam", quietly = TRUE, lib.loc = drive_lib)) {
     suppressMessages(BiocManager::install("decontam", lib = drive_lib, quiet = TRUE, update = TRUE, ask = FALSE))
   }
