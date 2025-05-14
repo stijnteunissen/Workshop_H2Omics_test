@@ -178,7 +178,7 @@ install_packages <- function() {
   suppressMessages(library(devtools))
 
   # Install micromics from GitHub in the temporary environment (default library)
-  suppressMessages(devtools::install_github("stijnteunissen/micromics", force = TRUE, quiet = TRUE))
+  suppressMessages(devtools::install_github("stijnteunissen/micromics", quiet = TRUE))
   suppressMessages(library(micromics))
 
   if (!requireNamespace(c("SparseArray", "DelayedArray", "S4Arrays", "SummarizedExperiment", "SingleCellExperiment", "TreeSummarizedExperiment", "treeio", "microbiome"), quietly = TRUE)) {
