@@ -14,6 +14,8 @@ def norm_and_import():
         options=[("fcm", "fcm"), ("qpcr", "qpcr")],
         value="qpcr",
         description="Norm Method:",
+        style={'description_width': 'initial'},
+        layout=widgets.Layout(width='max-content')
     )
 
     # Confirm button
