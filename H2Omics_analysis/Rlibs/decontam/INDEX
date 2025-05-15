@@ -1,6 +1,0 @@
-isContaminant           Identify contaminant sequences.
-isNotContaminant        Identify non-contaminant sequences.
-plot_condition          Plot DNA concentrations as a function of
-                        experimental conditions.
-plot_frequency          Plot frequencies as a function of input DNA
-                        concentration
