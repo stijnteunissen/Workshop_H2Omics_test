@@ -37,38 +37,15 @@ def import_files():
 
     print("Files have been successfully moved to:", dest_dir)
 
-    # Create dropdown widget for classification method
-    dropdown = widgets.Dropdown(
-        options=['Galaxy Classification', 'Not Galaxy Classification'],
-        value='Galaxy Classification',
-        description='Method:',
-    )
+    # Directly process and rename Galaxy file if found
+    file_pattern = os.path.join(dest_dir, "Galaxy*.qza")
+    matching_files = glob.glob(file_pattern)
 
-    # Create continue button
-    button = widgets.Button(description="Continue Script")
-    output = widgets.Output()
-
-    # Define button behavior
-    def process_files(b):
-        with output:
-            output.clear_output()
-            if dropdown.value == 'Galaxy Classification':
-                file_pattern = os.path.join(dest_dir, "Galaxy*.qza")
-                matching_files = glob.glob(file_pattern)
-
-                if matching_files:
-                    old_file = matching_files[0]
-                    new_file = os.path.join(dest_dir, f"{projects}_classifier.qza")
-                    os.rename(old_file, new_file)
-                    print(f"Renamed {old_file} to {new_file}")
-                else:
-                    print("No file matching 'Galaxy*.qza' found in:", dest_dir)
-            else:
-                print("Skipped processing: 'Not Galaxy Classification' was selected.")
-
-    # Attach button to function
-    button.on_click(process_files)
-
-    # Display widgets
-    display(dropdown, button, output)
+    if matching_files:
+        old_file = matching_files[0]
+        new_file = os.path.join(dest_dir, f"{projects}_classifier.qza")
+        os.rename(old_file, new_file)
+        print(f"Renamed {old_file} to {new_file}")
+    else:
+        print("No file matching 'Galaxy*.qza' found in:", dest_dir)
 
