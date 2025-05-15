@@ -1,0 +1,29 @@
+Package: micromics
+Title: What the Package Does (One Line, Title Case)
+Version: 0.0.0.9000
+Authors@R: 
+    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: What the package does (one paragraph).
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+        license
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+URL: https://github.com/stijnteunissen/micromics
+BugReports: https://github.com/stijnteunissen/micromics/issues
+RemoteType: github
+RemoteHost: api.github.com
+RemoteRepo: micromics
+RemoteUsername: stijnteunissen
+RemoteRef: HEAD
+RemoteSha: 9970124e83e0eb1aa0b6156074599adad911a15a
+GithubRepo: micromics
+GithubUsername: stijnteunissen
+GithubRef: HEAD
+GithubSHA1: 9970124e83e0eb1aa0b6156074599adad911a15a
+NeedsCompilation: no
+Packaged: 2025-05-15 09:51:52 UTC; root
+Author: First Last [aut, cre] (ORCID: YOUR-ORCID-ID)
+Maintainer: First Last <first.last@example.com>
+Built: R 4.5.0; ; 2025-05-15 09:51:53 UTC; unix

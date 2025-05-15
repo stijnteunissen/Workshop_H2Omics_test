@@ -1,0 +1,32 @@
+align_with_HMM_and_trim
+                        Align and trim sequence
+check_partition         Parse grouping information
+get_connected_nodes     Grouping connected nodes into neighborhoods
+get_partition_AIC       Calculate AIC after partition
+get_partition_transition
+                        Get number of transitions
+insert_query_with_EPA   Run EPA from R terminal
+parse_jplace            Parse EPA results
+partition_phylogeny_by_AIC_single
+                        Binary partition of a phylogeny
+predict_16SGCN_from_jplace
+                        Predict 16S rRNA GCN from sequence placements
+predict_16SGCN_from_sequences
+                        Predict 16S rRNA GCN from sequences
+RasperGade16S.GG.13.8.mask.keys
+                        GreenGene 13.8 16S rRNA gene mask for
+                        RasperGade16S
+RasperGade16S.refdata   Default full reference data for RasperGade16S
+RasperGade16S.refGCN    Default reference GCN for RasperGade16S
+RasperGade16S.reftree   Default reference tree for RasperGade16S
+RasperGade16S.SILVA.GCN
+                        Predicted SILVA 132 GCN (Bacteria only) by
+                        RasperGade16S
+refine_partition        Refine partition by reverting groups
+relative_abundance      Convert absolute abundance to relative
+                        abundance
+rescale_tree_by_partition_and_model
+                        Rescale tree given a partition and models
+trim_sequence_with_mask
+                        Trim 16S sequence based on GreenGene 13.8 16S
+                        mask

@@ -1,0 +1,162 @@
+---
+title: "Introduction to decontam"
+author: "Benjamin Callahan, Nicole Davis"
+date: "`r date()`"
+output: 
+  BiocStyle::html_document
+vignette: >
+  %\VignetteIndexEntry{Introduction to dada2}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}  
+---
+
+# Identifying contaminants in marker-gene and metagenomics data
+
+Introduction to [the decontam R package](https://github.com/benjjneb/decontam). User support, feature requests, comments and suggestions are welcome at [the decontam issues tracker](https://github.com/benjjneb/decontam/issues). The [preprint introducing decontam](https://doi.org/10.1101/221499) includes performance benchmarking, and demonstrates the benefits of `decontam`-inating your data for more accurate profiling of microbial communities.
+
+# Introduction
+
+The investigation of environmental microbial communities and microbiomes has been transformed by the recent widespread adoption of culture-free high-throughput sequencing methods. In amplicon sequencing a particular genetic locus is amplified from DNA extracted from the community of interest, and then sequenced on a next-generation sequencing platform. In shotgun metagenomics, bulk DNA is extracted from the community of interest and sequenced. Both techniques provide cost-effective and culture-free characterizatoins of microbial communities.
+
+However, the accuracy of these methods is limited in practice by the introduction of contaminating DNA that was not truly present in the sampled community. This contaminating DNA can come from several sources, such as the reagents used in the sequencing reaction, and can critically interfere with downstream analyses, especially in lower biomass environments. The `decontam` package provides simple statistical methods to identify and visualize contaminating DNA features, allowing them to be removed and a more accurate picture of sampled communities to be constructed from marker-gene and metagenomics data.
+
+# Necessary Ingredients
+
+The first `decontam` ingredient is a feature table derived from your raw data, i.e. a table of the relative abundances of sequence features (columns) in each sample (rows). These "sequence features" can be any of a wide variety of feature types, including amplicon sequence variants (ASVs), operational taxonomic units (OTUs), taxonomic groups or phylotypes (e.g. genera), orthologous genes or metagenome-assembled-genomes (MAGs) -- anything with a quantitative abundance derived from marker-gene or metagenomics data.
+
+The second `decontam` ingredient is one of two types of metadata: 
+
+1. DNA quantitation data recording the concentration of DNA in each sample. Most often this is collected in the form of fluorescent intensities measured prior to mixing samples into equimolar ratios for sequencing (and after PCR in amplicon sequencing), but sometimes it is collected via qPCR or other approach on extracted DNA.
+
+2. A defined set of "negative control" samples in which sequencing was performed on blanks without any biological sample added. Extraction controls are preferred, and in amplicon sequencing the negative controls should also be carried through the PCR step, as each step in the workflow has the potential to introduce new contaminants.
+
+Finally, this data needs to be imported into R. The feature table should be imported as a sample-by-feature `matrix` and the sample metadata as a `vector` with length the number of samples. Alternatively, you can use the `phyloseq` package to import the data as a `phyloseq` object.
+
+# Setting up
+
+The `decontam` package works with feature tables in the form of a standard R `matrix`, but it is even easier to work with `phyloseq` objects from [the `phyloseq` package](https://joey711.github.io/phyloseq/), which is designed to ease the analysis of marker-gene and metagenomics datasets.
+
+In this introductory tutorial, we'll start by reading in a `phyloseq` object to work with:
+```{r loadPS}
+library(phyloseq); packageVersion("phyloseq")
+library(ggplot2); packageVersion("ggplot2")
+library(decontam); packageVersion("decontam")
+ps <- readRDS(system.file("extdata", "MUClite.rds", package="decontam"))
+ps
+```
+
+This phyloseq objects has a table of 1951 amplicon sequence variants (ASVs) inferred by [the DADA2 algorithm](http://benjjneb.github.io/dada2/) from amplicon sequencing data of the V4 region of the 16S rRNA gene. The phyloseq objects also includes the sample metadata information needed to use `decontam`.
+
+```{r see-meta-table}
+head(sample_data(ps))
+```
+
+The key sample variables are `quant_reading`, which is the DNA concentration in each sample as measured by fluorescent intensity, and `Sample_or_Control` which tells us which samples are the negative controls.
+
+# Inspect Library Sizes
+
+Let's take a quick first look at the library sizes (i.e. the number of reads) in each sample, as a function of whether that sample was a true positive sample or a negative control:
+```{r see-depths}
+df <- as.data.frame(sample_data(ps)) # Put sample_data into a ggplot-friendly data.frame
+df$LibrarySize <- sample_sums(ps)
+df <- df[order(df$LibrarySize),]
+df$Index <- seq(nrow(df))
+ggplot(data=df, aes(x=Index, y=LibrarySize, color=Sample_or_Control)) + geom_point()
+```
+
+The library sizes of the positive samples primarily fall from 15,000 to 40,000 reads, but there are some low-read outliers. The negative control samples have fewer reads as expected. **Note:** It is important keep the low-read samples for now, because we want to use those negative controls to help identify contaminants!
+
+# Identify Contaminants - Frequency
+
+The first contaminant identification method we'll use is the "frequency" method. In this method, the distribution of the frequency of each sequence feature as a function of the input DNA concentration is used to identify contaminants.
+
+In our phyloseq object, `"quant_reading"` is the sample variable that holds the concentration information:
+```{r frequency}
+contamdf.freq <- isContaminant(ps, method="frequency", conc="quant_reading")
+head(contamdf.freq)
+```
+
+This calculation has returned a `data.frame` with several columns, the most important being `$p` which containts the probability that was used for classifying contaminants, and `$contaminant` which contains `TRUE`/`FALSE` classification values with `TRUE` indicating that the statistical evidence that the associated sequence feature is a contaminant exceeds the user-settable threshold. As we did not specify the threshold, the default value of `threshold = 0.1` was used, and `$contaminant=TRUE` if `$p < 0.1`.
+
+```{r table}
+table(contamdf.freq$contaminant)
+head(which(contamdf.freq$contaminant))
+```
+
+Just 58 out of the 1901 ASVs were classified as contaminants, but this includes some very abundant sequences, including the third (!) most abundant ASV.
+
+Let's take a look at what a clear non-contaminant (the 1st ASV), and a clear contaminant (the 3rd ASV), look like:
+```{r plot-abundance, warning=FALSE}
+plot_frequency(ps, taxa_names(ps)[c(1,3)], conc="quant_reading") + 
+  xlab("DNA Concentration (PicoGreen fluorescent intensity)")
+```
+
+In this plot the dashed black line shows the model of a noncontaminant sequence feature for which frequency is expected to be independent of the input DNA concentration. The red line shows the model of a contaminant sequence feature, for which frequency is expected to be inversely proportional to input DNA concentration, as contaminating DNA will make up a larger fraction of the total DNA in samples with very little total DNA. Clearly Seq3 fits the red contaminat model very well, while Seq1 does not.
+
+Let's inspect a couple more of the ASVs that were classified as contaminants to ensure they look like what we expect:
+```{r see-contams, warning=FALSE}
+set.seed(100)
+plot_frequency(ps, taxa_names(ps)[sample(which(contamdf.freq$contaminant),3)], conc="quant_reading") +
+    xlab("DNA Concentration (PicoGreen fluorescent intensity)")
+```
+
+Those all look like contaminants!
+
+Now that we have identified likely contaminants, let's remove them from the phyloseq object:
+```{r remove}
+ps
+ps.noncontam <- prune_taxa(!contamdf.freq$contaminant, ps)
+ps.noncontam
+```
+
+And off we go with analysis of the contaminant-filtered data! 
+
+*See [the phyloseq web site](https://joey711.github.io/phyloseq/) for documentation of the many powerful analyses available through the phyloseq R package.*
+
+# Identify Contaminants - Prevalence
+
+The second contaminant identification method we'll use is the "prevalence" method. In this method, the prevalence (presence/absence across samples) of each sequence feature in true positive samples is compared to the prevalence in negative controls to identify contaminants.
+
+In our phyloseq object, `"Sample_or_Control"` is the sample variable that holds the negative control information. We'll summarize that data as a logical variable, with `TRUE` for control samples, as that is the form required by `isContaminant`.
+```{r prevalence}
+sample_data(ps)$is.neg <- sample_data(ps)$Sample_or_Control == "Control Sample"
+contamdf.prev <- isContaminant(ps, method="prevalence", neg="is.neg")
+table(contamdf.prev$contaminant)
+head(which(contamdf.prev$contaminant))
+```
+
+Prevalence-based contaminant identification has identified a larger number of contaminants, `r sum(contamdf.prev$contaminant)`, than did the frequency-based method, `r sum(contamdf.freq$contaminant)`, in this dataset, but also missed the very clear and highly abundant contaminant `Seq3`, because `Seq3` was present in almost all samples - negative and positive.
+
+Note that as before, the default threshold for a contaminant is that it reaches a probability of 0.1 in the statistical test being performed. In the prevalence test there is a special value worth knowing, `threshold=0.5`, that will identify as contaminants all sequences thare are more prevalent in negative controls than in positive samples. Let's try using this more aggressive classification threshold rather than the default.
+
+```{r prevalence-05}
+contamdf.prev05 <- isContaminant(ps, method="prevalence", neg="is.neg", threshold=0.5)
+table(contamdf.prev05$contaminant)
+```
+
+Let's take a look at the number of times several of these taxa were observed in negative controls and positive samples.
+```{r see-prev-05}
+# Make phyloseq object of presence-absence in negative controls and true samples
+ps.pa <- transform_sample_counts(ps, function(abund) 1*(abund>0))
+ps.pa.neg <- prune_samples(sample_data(ps.pa)$Sample_or_Control == "Control Sample", ps.pa)
+ps.pa.pos <- prune_samples(sample_data(ps.pa)$Sample_or_Control == "True Sample", ps.pa)
+# Make data.frame of prevalence in positive and negative samples
+df.pa <- data.frame(pa.pos=taxa_sums(ps.pa.pos), pa.neg=taxa_sums(ps.pa.neg),
+                      contaminant=contamdf.prev$contaminant)
+ggplot(data=df.pa, aes(x=pa.neg, y=pa.pos, color=contaminant)) + geom_point() +
+  xlab("Prevalence (Negative Controls)") + ylab("Prevalence (True Samples)")
+```
+
+Taxa seem to split pretty cleanly into a branch that shows up mostly in positive samples, and another that shows up mostly in negative controls, and the contaminant assignment (at default probability threshold) has done a good job of identifying those mostly in negative controls.
+
+# Putting It All Together
+
+The two basic methods implemented are the `frequency` and `prevalence` methods shown above, but a number of additional ways to utilize those methods are available. The `combined`, `minimum` and `independent` modes all use both the `frequency` and `prevalence` methods to identify contaminants, but combine the results of the two methods in different ways (see `?isContaminant` for more information). There is also a `batch` functionality that allows contaminants to be identified independently in different batches (e.g. sequencing runs, or different studies) that are expected to have different contaminant profiles.
+
+# Conclusion
+
+We all know that contaminants are a problem in marker-gene and metagenomics data. Right now, it is widespread practice to address contamition by sequencing negative controls, and then doing nothing, in large part because there haven't been easy to use tools available to identify contaminants in this kind of data. That's where the `decontam` package comes in. `decontam` provides a simple interface that takes in your table of sequence features (ASVs, OTUs, MAGs, genera, etc), and classifies each sequence feature as a contaminant based on signatures of contamination that have been demonstrated over [many](https://doi.org/10.1186/s12915-014-0087-z) [previous](https://doi.org/10.1371/journal.pone.0110808) [studies](https://doi.org/10.1186/s40168-015-0083-8).
+
+[Removing contaminants makes the characterizations provided by marker-gene and metagenomics sequencing more accurate](https://doi.org/10.1101/221499). It prevent false positives in exploratory analyses. It reduces batch effects between different studies and sequencing runs. It increases statistical power by reducing the additional hypotheses spent on contaminant sequencing features.
+
+Removing contaminants makes your data better, and that's always worth doing.
