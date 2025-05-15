@@ -1,6 +1,0 @@
-isContaminant	isContaminant
-isContaminant,ANY-method	isContaminant
-isNotContaminant	isNotContaminant
-isNotContaminant,ANY-method	isNotContaminant
-plot_condition	plot_condition
-plot_frequency	plot_frequency
