@@ -15,6 +15,7 @@ install_packages <- function() {
   #   install.packages("BiocManager", lib = drive_lib, quiet = TRUE)
   # }
   suppressMessages(library(BiocManager, lib.loc = drive_lib))
+  suppressMessages(library(ggplot2, lib.loc = drive_lib))
 
   # if (!requireNamespace("decontam", quietly = TRUE, lib.loc = drive_lib)) {
   #   suppressMessages(BiocManager::install("decontam", lib = drive_lib, quiet = TRUE, update = TRUE, ask = FALSE))
