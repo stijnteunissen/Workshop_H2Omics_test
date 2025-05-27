@@ -1,0 +1,5 @@
+SampleID	sample_or_control	DNA_Concentration	na_type	timepoint
+sample.01	sample	2.45	dna	0
+sample.02	sample	6.7	rna	3
+sample.blank	blank	0	NA	NA
+sample.mock	mock	6	NA	NA
