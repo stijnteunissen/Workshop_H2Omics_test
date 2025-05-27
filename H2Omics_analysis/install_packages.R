@@ -16,6 +16,9 @@ install_packages <- function() {
   }
   suppressMessages(library(BiocManager, lib.loc = drive_lib))
 
+  # Force Bioconductor version compatible with R 4.2
+  BiocManager::install(version = "3.16", ask = FALSE, quiet = TRUE)
+
   if (!requireNamespace("decontam", quietly = TRUE, lib.loc = drive_lib)) {
     suppressMessages(BiocManager::install("decontam", lib = drive_lib, quiet = TRUE, update = TRUE, ask = FALSE))
   }
