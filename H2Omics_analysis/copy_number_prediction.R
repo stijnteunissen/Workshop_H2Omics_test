@@ -1,6 +1,7 @@
 copy_number_prediction = function() {
 
-Sys.setenv(PATH = paste("/content/Workshop_H2Omics_test/H2Omics_analysis/tools", Sys.getenv("PATH"), sep = ":"))
+  micromamba_path <- "/content/envs/epa-env/bin"
+  Sys.setenv(PATH = paste(micromamba_path, Sys.getenv("PATH"), sep = ":"))
 
 # Set the qiime2 output directory (using base_path and projects)
 qiime_output_dir <- file.path(base_path, projects, "qiime2_output")
