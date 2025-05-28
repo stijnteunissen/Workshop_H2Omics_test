@@ -1,64 +1,220 @@
 install_packages <- function() {
   options(getClass.msg = FALSE)
+  # Define the custom library folder on your Google Drive for phyloseq
+  drive_lib <- "/content/Workshop_H2Omics_test/H2Omics_analysis/Rlibs" # "/content/drive/MyDrive/Rlibs"
+  if (!dir.exists(drive_lib)) {
+    dir.create(drive_lib, recursive = TRUE)
+    message("Custom library folder created at: ", drive_lib)
+  }
 
-  drive_lib <- "/content/Workshop_H2Omics_test/H2Omics_analysis/Rlibs"
-  if (!dir.exists(drive_lib)) dir.create(drive_lib, recursive = TRUE)
+  # Prepend drive_lib to the library paths so it is searched first
   .libPaths(c(drive_lib, .libPaths()))
 
-  # Installeer BiocManager indien nodig
+  # Install BiocManager in the drive library if not already installed there
   if (!requireNamespace("BiocManager", quietly = TRUE, lib.loc = drive_lib)) {
     install.packages("BiocManager", lib = drive_lib, quiet = TRUE)
   }
   suppressMessages(library(BiocManager, lib.loc = drive_lib))
 
-  # Forceer Bioconductor versie 3.16
-  BiocManager::install(version = "3.16", ask = FALSE, quiet = TRUE)
-  options(repos = BiocManager::repositories(version = "3.16"))
-
-  # Bioconductor packages
-  bioc_pkgs <- c(
-    "decontam", "SparseArray", "DelayedArray", "S4Arrays", "SummarizedExperiment",
-    "SingleCellExperiment", "TreeSummarizedExperiment", "treeio", "microbiome", "phyloseq"
-  )
-  for (pkg in bioc_pkgs) {
-    if (!requireNamespace(pkg, quietly = TRUE, lib.loc = drive_lib)) {
-      BiocManager::install(pkg, lib = drive_lib, quiet = TRUE, ask = FALSE, update = FALSE, version = "3.16")
-    }
-    suppressMessages(library(pkg, lib.loc = drive_lib, character.only = TRUE))
+  if (!requireNamespace("decontam", quietly = TRUE, lib.loc = drive_lib)) {
+    suppressMessages(BiocManager::install("decontam", lib = drive_lib, quiet = TRUE, update = TRUE, ask = FALSE))
   }
+  suppressMessages(library(decontam, lib.loc = drive_lib))
 
-  # CRAN packages
-  cran_pkgs <- c(
-    "glue", "parallel", "tinytex", "vegan", "openxlsx", "ggtext", "cowplot", "lubridate",
-    "scales", "viridis", "ggrepel", "ggforce", "config", "yaml", "colorspace", "jsonlite",
-    "dplyr", "ggplot2", "RColorBrewer", "ggh4x", "rlang", "tibble", "castor", "seqinr", "devtools"
-  )
-  for (pkg in cran_pkgs) {
-    if (!requireNamespace(pkg, quietly = TRUE)) {
-      install.packages(pkg, quiet = TRUE)
-    }
-    suppressMessages(library(pkg, character.only = TRUE))
+  # The following packages will be installed in the temporary environment:
+  if (!requireNamespace("glue", quietly = TRUE)) {
+    install.packages("glue", quiet = TRUE)
   }
+  suppressMessages(library(glue))
 
-  # GitHub packages
-  github_pkgs <- list(
-    micromics = "stijnteunissen/micromics",
-    qiime2R = "jbisanz/qiime2R",
-    RasperGade = "wu-lab-uva/RasperGade",
-    RasperGade16S = "wu-lab-uva/RasperGade16S"
-  )
-  for (pkg in names(github_pkgs)) {
-    if (!requireNamespace(pkg, quietly = TRUE)) {
-      devtools::install_github(github_pkgs[[pkg]], quiet = TRUE)
-    }
-    suppressMessages(library(pkg, character.only = TRUE))
+  if (!requireNamespace("parallel", quietly = TRUE)) {
+    install.packages("parallel", quiet = TRUE)
   }
+  suppressMessages(library(parallel))
 
-  # Tidyverse via CRAN
+  if (!requireNamespace("tinytex", quietly = TRUE)) {
+    install.packages("tinytex", quiet = TRUE)
+  }
+  suppressMessages(library(tinytex))
+
+  if (!requireNamespace("vegan", quietly = TRUE)) {
+    install.packages("vegan", quiet = TRUE)
+  }
+  suppressMessages(library(vegan))
+
+  if (!requireNamespace("openxlsx", quietly = TRUE)) {
+    install.packages("openxlsx", quiet = TRUE)
+  }
+  suppressMessages(library(openxlsx))
+
+  if (!requireNamespace("ggtext", quietly = TRUE)) {
+    install.packages("ggtext", quiet = TRUE)
+  }
+  suppressMessages(library(ggtext))
+
+  if (!requireNamespace("cowplot", quietly = TRUE)) {
+    install.packages("cowplot", quiet = TRUE)
+  }
+  suppressMessages(library(cowplot))
+
+  if (!requireNamespace("lubridate", quietly = TRUE)) {
+    install.packages("lubridate", quiet = TRUE)
+  }
+  suppressMessages(library(lubridate))
+
+  if (!requireNamespace("scales", quietly = TRUE)) {
+    install.packages("scales", quiet = TRUE)
+  }
+  suppressMessages(library(scales))
+
+  if (!requireNamespace("viridis", quietly = TRUE)) {
+    install.packages("viridis", quiet = TRUE)
+  }
+  suppressMessages(library(viridis))
+
+  if (!requireNamespace("ggrepel", quietly = TRUE)) {
+    install.packages("ggrepel", quiet = TRUE)
+  }
+  suppressMessages(library(ggrepel))
+
+  if (!requireNamespace("ggforce", quietly = TRUE)) {
+    install.packages("ggforce", quiet = TRUE)
+  }
+  suppressMessages(library(ggforce))
+
+  if (!requireNamespace("config", quietly = TRUE)) {
+    install.packages("config", quiet = TRUE)
+  }
+  suppressMessages(library(config))
+
+  if (!requireNamespace("yaml", quietly = TRUE)) {
+    install.packages("yaml", quiet = TRUE)
+  }
+  suppressMessages(library(yaml))
+
+  if (!requireNamespace("colorspace", quietly = TRUE)) {
+    install.packages("colorspace", quiet = TRUE)
+  }
+  suppressMessages(library(colorspace))
+
+  if (!requireNamespace("jsonlite", quietly = TRUE)) {
+    install.packages("jsonlite", quiet = TRUE)
+  }
+  suppressMessages(library(jsonlite))
+
+  if (!requireNamespace("jsonlite", quietly = TRUE)) {
+    install.packages("jsonlite", quiet = TRUE)
+  }
+  suppressMessages(library(jsonlite))
+
+  if (!requireNamespace("dplyr", quietly = TRUE)) {
+    install.packages("dplyr", quiet = TRUE)
+  }
+  suppressMessages(library(dplyr))
+
+  if (!requireNamespace("ggplot2", quietly = TRUE)) {
+    install.packages("ggplot2", quiet = TRUE)
+  }
+  suppressMessages(library(ggplot2))
+
+  if (!requireNamespace("RColorBrewer", quietly = TRUE)) {
+    install.packages("RColorBrewer", quiet = TRUE)
+  }
+  suppressMessages(library(RColorBrewer))
+
+  if (!requireNamespace("scales", quietly = TRUE)) {
+    install.packages("scales", quiet = TRUE)
+  }
+  suppressMessages(library(scales))
+
+  if (!requireNamespace("ggh4x", quietly = TRUE)) {
+    install.packages("ggh4x", quiet = TRUE)
+  }
+  suppressMessages(library(ggh4x))
+
+  if (!requireNamespace("ggtext", quietly = TRUE)) {
+    install.packages("ggtext", quiet = TRUE)
+  }
+  suppressMessages(library(ggtext))
+
+  if (!requireNamespace("rlang", quietly = TRUE)) {
+    install.packages("rlang", quiet = TRUE)
+  }
+  suppressMessages(library(rlang))
+
+  if (!requireNamespace("tibble", quietly = TRUE)) {
+    install.packages("tibble", quiet = TRUE)
+  }
+  suppressMessages(library(tibble))
+
+  if (!requireNamespace("cowplot", quietly = TRUE)) {
+    install.packages("cowplot", quiet = TRUE)
+  }
+  suppressMessages(library(cowplot))
+
+  if (!requireNamespace("jsonlite", quietly = TRUE)) {
+    install.packages("jsonlite", quiet = TRUE)
+  }
+  suppressMessages(library(jsonlite))
+
+  if (!requireNamespace("castor", quietly = TRUE)) {
+    install.packages("castor", quiet = TRUE)
+  }
+  suppressMessages(library(castor))
+
+  if (!requireNamespace("seqinr", quietly = TRUE)) {
+    install.packages("seqinr", quiet = TRUE)
+  }
+  suppressMessages(library(castor))
+
+  if (!requireNamespace("devtools", quietly = TRUE)) {
+    install.packages("devtools", quiet = TRUE)
+  }
+  suppressMessages(library(devtools))
+
+  # Install micromics from GitHub in the temporary environment (default library)
+  suppressMessages(devtools::install_github("stijnteunissen/micromics", quiet = TRUE))
+  suppressMessages(library(micromics))
+
+  if (!requireNamespace(c("SparseArray", "DelayedArray", "S4Arrays", "SummarizedExperiment", "SingleCellExperiment", "TreeSummarizedExperiment", "treeio", "microbiome"), quietly = TRUE)) {
+    BiocManager::install(
+      c("SparseArray", "DelayedArray", "S4Arrays", "SummarizedExperiment", "SingleCellExperiment", "TreeSummarizedExperiment", "treeio", "microbiome"),
+      quiet = TRUE, update = FALSE, ask = FALSE)
+  }
+  suppressMessages(library("SparseArray"))
+  suppressMessages(library("DelayedArray"))
+  suppressMessages(library("S4Arrays"))
+  suppressMessages(library("SummarizedExperiment"))
+  suppressMessages(library("SingleCellExperiment",))
+  suppressMessages(library("TreeSummarizedExperiment"))
+  suppressMessages(library("treeio"))
+  suppressMessages(library("microbiome"))
+
+  if (!requireNamespace("qiime2R", quietly = TRUE)) {
+    devtools::install_github("jbisanz/qiime2R", quiet = TRUE)
+  }
+  suppressMessages(library(qiime2R))
+
+  if (!requireNamespace("RasperGade", quietly = TRUE)) {
+    devtools::install_github(repo = "wu-lab-uva/RasperGade", quiet = TRUE)
+  }
+  suppressMessages(library(RasperGade))
+
+  if (!requireNamespace("RasperGade16S", quietly = TRUE)) {
+    devtools::install_github(repo = "wu-lab-uva/RasperGade16S", quiet = TRUE)
+  }
+  suppressMessages(library(RasperGade16S))
+
   if (!requireNamespace("tidyverse", quietly = TRUE)) {
-    install.packages("tidyverse", quiet = TRUE)
+    devtools::install_github("tidyverse", quiet = TRUE)
   }
   suppressMessages(library(tidyverse))
 
-  message("lle packages zijn succesvol geïnstalleerd en geladen.")
+  # Install phyloseq in the drive library if not already installed there
+  if (!requireNamespace("phyloseq", quietly = TRUE, lib.loc = drive_lib)) {
+    suppressMessages(BiocManager::install("phyloseq", lib = drive_lib, quiet = TRUE, update = TRUE, ask = FALSE))
+  }
+  suppressMessages(library(phyloseq, lib.loc = drive_lib))
+
+  message("All packages have been installed and loaded.")
 }
