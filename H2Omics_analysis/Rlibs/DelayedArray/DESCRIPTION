@@ -58,4 +58,4 @@ Packaged: 2025-04-17 20:56:26 UTC; biocbuild
 Author: Hervé Pagès [aut, cre],
   Aaron Lun [ctb],
   Peter Hickey [ctb]
-Built: R 4.5.0; x86_64-pc-linux-gnu; 2025-05-14 13:27:54 UTC; unix
+Built: R 4.5.0; x86_64-pc-linux-gnu; 2025-05-28 10:04:18 UTC; unix

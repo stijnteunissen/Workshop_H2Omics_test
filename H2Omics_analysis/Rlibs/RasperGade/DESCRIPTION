@@ -26,7 +26,7 @@ GithubUsername: wu-lab-uva
 GithubRef: HEAD
 GithubSHA1: 7dcb8c5d02628563ec3c97b923dc4561247a427f
 NeedsCompilation: no
-Packaged: 2025-05-14 14:00:40 UTC; root
+Packaged: 2025-05-28 10:15:09 UTC; root
 Author: Yingnan Gao [aut, cre] (ORCID: <https://orcid.org/0000-0002-0960-4519>)
 Maintainer: Yingnan Gao <yg5ap@virginia.edu>
-Built: R 4.5.0; ; 2025-05-14 14:00:41 UTC; unix
+Built: R 4.5.0; ; 2025-05-28 10:15:10 UTC; unix

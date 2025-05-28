@@ -1,4 +1,5 @@
 alpha_diversity	alpha_diversity
+amp_rarecurve	amp_rarecurve
 barplot	barplot
 beta_diversity	beta_diversity
 create_folders	create_folders

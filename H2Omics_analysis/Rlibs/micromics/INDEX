@@ -1,4 +1,5 @@
 alpha_diversity         Generate Alpha Diversity Plots
+amp_rarecurve           Generate Rarefaction Curves
 barplot                 Create Barplots for Relative and Absolute
                         Abundance
 beta_diversity          Generate Beta Diversity Ordination Plots

@@ -43,4 +43,4 @@ Packaged: 2025-04-16 00:11:12 UTC; biocbuild
 Author: Hervé Pagès [aut, cre] (ORCID: <https://orcid.org/0009-0002-8272-4522>),
   Jacques Serizay [ctb]
 Maintainer: Hervé Pagès <hpages.on.github@gmail.com>
-Built: R 4.5.0; x86_64-pc-linux-gnu; 2025-05-14 13:24:17 UTC; unix
+Built: R 4.5.0; x86_64-pc-linux-gnu; 2025-05-28 10:00:42 UTC; unix

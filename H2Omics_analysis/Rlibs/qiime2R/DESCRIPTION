@@ -29,5 +29,5 @@ GithubUsername: jbisanz
 GithubRef: HEAD
 GithubSHA1: fb7a907fcf7db00762acfaec4c041b652906beaa
 NeedsCompilation: no
-Packaged: 2025-05-14 13:58:53 UTC; root
-Built: R 4.5.0; ; 2025-05-14 13:58:54 UTC; unix
+Packaged: 2025-05-28 10:13:23 UTC; root
+Built: R 4.5.0; ; 2025-05-28 10:13:24 UTC; unix

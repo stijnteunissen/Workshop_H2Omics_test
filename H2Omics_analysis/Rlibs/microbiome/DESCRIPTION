@@ -33,4 +33,4 @@ NeedsCompilation: no
 Author: Leo Lahti [aut, cre] (ORCID: <https://orcid.org/0000-0001-5537-637X>),
   Sudarshan Shetty [aut] (ORCID: <https://orcid.org/0000-0001-7280-9915>)
 Maintainer: Leo Lahti <leo.lahti@iki.fi>
-Built: R 4.5.0; ; 2025-05-14 13:29:30 UTC; unix
+Built: R 4.5.0; ; 2025-05-28 10:05:54 UTC; unix
