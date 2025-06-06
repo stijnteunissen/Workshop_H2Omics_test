@@ -16,29 +16,28 @@ def import_files():
     base_path = str(ro.r["base_path"][0])  # base_path should end with "/"
     
     # Build the full destination directory path
-    dest_dir = os.path.join(base_path, projects, 'qiime2_output')
-    # Ensure the destination directory exists
+    dest_dir = os.path.join(base_path, projects, "qiime2_output")
     os.makedirs(dest_dir, exist_ok=True)
     
-    # Define required filenames
-    required = [
-        "table.qza",
-        "classifier.qza",
-        "rooted-tree.qza",
-        "representative_sequences.qza",
-        "metadata.tsv"
-    ]
+    # Define required wildcard patterns (substring must appear and must end with .qza)
+    required_patterns = {
+        "table*.qza":                "file containing 'table' and ending with .qza",
+        "classifier*.qza":           "file containing 'classifier' and ending with .qza",
+        "rooted-tree*.qza":          "file containing 'rooted-tree' and ending with .qza",
+        "representative_sequences*.qza": "file containing 'representative_sequences' and ending with .qza"
+    }
     # metadata_extra can be .txt, .tsv, or .csv
-    extra_patterns = ["metadata_extra.tsv", "metadata_extra.txt", "metadata_extra.csv"]
+    metadata_patterns = ["metadata*.tsv", "metadata*.txt", "metadata*.csv"]
     
     def check_missing():
-        """Return a list of missing required files (wildcard for metadata_extra)."""
+        """Return a list of descriptions of missing required files."""
         missing = []
-        for fname in required:
-            if not os.path.exists(os.path.join(dest_dir, fname)):
-                missing.append(fname)
-        if not any(os.path.exists(os.path.join(dest_dir, p)) for p in extra_patterns):
-            missing.append("metadata_extra.(tsv/text/csv)")
+        for pattern, description in required_patterns.items():
+            if not glob.glob(os.path.join(dest_dir, pattern)):
+                missing.append(description)
+        # For metadata: require at least one of the three extensions
+        if not any(glob.glob(os.path.join(dest_dir, pat)) for pat in metadata_patterns):
+            missing.append("metadata file ending in .tsv, .txt, or .csv")
         return missing
     
     # Initial check
@@ -77,8 +76,10 @@ def import_files():
     # Final check
     still_missing = check_missing()
     if still_missing:
-        error_msg = ("Error: The following required files are still missing "
-                     f"after upload: {', '.join(still_missing)}")
+        error_msg = (
+            "Error: The following required files are still missing after upload:\n  - "
+            + "\n  - ".join(still_missing)
+        )
         raise FileNotFoundError(error_msg)
     
     print("All required files are now present in:", dest_dir)
