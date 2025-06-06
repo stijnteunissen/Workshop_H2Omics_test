@@ -7,35 +7,37 @@ import rpy2.robjects as ro
 def import_files():
     """
     Checks if all required QIIME2 files exist in the project’s qiime2_output folder.
-    If any are missing, prompts the user to upload them. After upload, moves files into place,
-    renames any Galaxy*.qza to <project>_classifier.qza, and then verifies that all required
-    files are now present. If any still missing, raises an error listing them.
+    Required files can have extra text before 'table', 'classifier', etc., as long as
+    the substring and extension match. If missing, prompts upload, moves into place,
+    renames any Galaxy*.qza to <project>_classifier.qza, and re-checks. Raises error
+    if still missing after upload.
     """
     # Retrieve 'projects' and 'base_path' from R environment
     projects = str(ro.r["projects"][0])
-    base_path = str(ro.r["base_path"][0])  # base_path should end with "/"
+    base_path = str(ro.r["base_path"][0])  # should end with "/"
     
-    # Build the full destination directory path
+    # Destination: r_visualisation/<project>/qiime2_output
     dest_dir = os.path.join(base_path, projects, "qiime2_output")
     os.makedirs(dest_dir, exist_ok=True)
     
-    # Define required wildcard patterns (substring must appear and must end with .qza)
+    # Define required wildcard patterns
     required_patterns = {
-        "table*.qza":                "file containing 'table' and ending with .qza",
-        "classifier*.qza":           "file containing 'classifier' and ending with .qza",
-        "rooted-tree*.qza":          "file containing 'rooted-tree' and ending with .qza",
-        "representative_sequences*.qza": "file containing 'representative_sequences' and ending with .qza"
+        "*table*.qza":                 "file containing 'table' and ending with .qza",
+        "*classifier*.qza":            "file containing 'classifier' and ending with .qza",
+        "*rooted-tree*.qza":           "file containing 'rooted-tree' and ending with .qza",
+        "*representative_sequences*.qza": "file containing 'representative_sequences' and ending with .qza"
     }
-    # metadata_extra can be .txt, .tsv, or .csv
-    metadata_patterns = ["metadata*.tsv", "metadata*.txt", "metadata*.csv"]
+    # Any metadata file ending in .tsv, .txt, or .csv
+    metadata_patterns = ["*metadata*.tsv", "*metadata*.txt", "*metadata*.csv"]
     
     def check_missing():
-        """Return a list of descriptions of missing required files."""
+        """Return list of descriptions for missing required files."""
         missing = []
+        # Check each required .qza pattern
         for pattern, description in required_patterns.items():
             if not glob.glob(os.path.join(dest_dir, pattern)):
                 missing.append(description)
-        # For metadata: require at least one of the three extensions
+        # Check metadata
         if not any(glob.glob(os.path.join(dest_dir, pat)) for pat in metadata_patterns):
             missing.append("metadata file ending in .tsv, .txt, or .csv")
         return missing
@@ -44,7 +46,7 @@ def import_files():
     missing = check_missing()
     if not missing:
         print("All required files are already present in:", dest_dir)
-        # Rename any Galaxy*.qza if found
+        # Rename Galaxy*.qza if found
         galaxy_files = glob.glob(os.path.join(dest_dir, "Galaxy*.qza"))
         if galaxy_files:
             old_file = galaxy_files[0]
@@ -53,11 +55,10 @@ def import_files():
             print(f"Renamed '{os.path.basename(old_file)}' to '{os.path.basename(new_file)}'.")
         return
     
-    # If some files are missing, prompt for upload
+    # If files are missing, prompt for upload
     print("Missing required files:", ", ".join(missing))
     print("Please upload the missing files now.")
     
-    # Upload files
     uploaded = files.upload()
     for filename in uploaded.keys():
         dest_path = os.path.join(dest_dir, filename)
@@ -65,7 +66,7 @@ def import_files():
     del uploaded
     print("Uploaded files moved to:", dest_dir)
     
-    # After upload, rename Galaxy*.qza if present
+    # After upload, rename Galaxy*.qza if found
     galaxy_files = glob.glob(os.path.join(dest_dir, "Galaxy*.qza"))
     if galaxy_files:
         old_file = galaxy_files[0]
