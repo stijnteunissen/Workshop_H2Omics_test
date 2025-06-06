@@ -7,7 +7,6 @@ copy_number_prediction <- function() {
 
   # If any such RDS exists, skip execution
   if (length(existing_rds) > 0) {
-    stop()
   } else {
   # Otherwise, run the prediction steps
   micromamba_path <- "/content/envs/epa-env/bin"
