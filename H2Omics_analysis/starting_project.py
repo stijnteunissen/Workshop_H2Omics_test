@@ -107,9 +107,9 @@ def starting_project():
             # Create the project structure
             project_path, base_path, qiime2_output_path = create_project_structure(project_name, project_folder)
             
-            # If an existing project is chosen, try copying files from the 'qiime_anlayseis/output' folder
+            # If an existing project is chosen, try copying files from the 'qiime_analysis/output' folder
             if not start_new_project and project_dropdown.value != "Start new project":
-                source_path = os.path.join(project_folder, "qiime_anlayseis", "output")
+                source_path = os.path.join(project_folder, "qiime_analysis", "output")
                 if os.path.exists(source_path):
                     files_to_copy = os.listdir(source_path)
                     for item in files_to_copy:
@@ -125,11 +125,6 @@ def starting_project():
                     print(f"Files copied from {source_path} to {qiime2_output_path}.")
                 else:
                     print(f"Source folder '{source_path}' does not exist.")
-            else:
-                # For a new project: provide instructions for file uploading
-                print("Now upload files to the folder:")
-                print(qiime2_output_path)
-                print("For uploading, use the provided Python snippet in the next cell.")
             
             # Display project information
             print("Project name (projects):", project_name)

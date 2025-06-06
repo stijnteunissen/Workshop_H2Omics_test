@@ -1,10 +1,12 @@
 copy_number_prediction = function() {
 
-  micromamba_path <- "/content/envs/epa-env/bin"
-  Sys.setenv(PATH = paste(micromamba_path, Sys.getenv("PATH"), sep = ":"))
+micromamba_path <- "/content/envs/epa-env/bin"
+Sys.setenv(PATH = paste(micromamba_path, Sys.getenv("PATH"), sep = ":"))
 
 # Set the qiime2 output directory (using base_path and projects)
 qiime_output_dir <- file.path(base_path, projects, "qiime2_output")
+
+
 
 qza_file = list.files(qiime_output_dir, pattern = "representative_sequences\\.qza$", full.names = TRUE)
 temp_dir = tempfile("rep_seq_")
