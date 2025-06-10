@@ -18,13 +18,13 @@ RemoteHost: api.github.com
 RemoteRepo: micromics
 RemoteUsername: stijnteunissen
 RemoteRef: HEAD
-RemoteSha: 80247723aae9a1ea3de37a235d3c3f171def5eb7
+RemoteSha: 311325ac5121151bfdfc39b0d60eb688c64b7306
 GithubRepo: micromics
 GithubUsername: stijnteunissen
 GithubRef: HEAD
-GithubSHA1: 80247723aae9a1ea3de37a235d3c3f171def5eb7
+GithubSHA1: 311325ac5121151bfdfc39b0d60eb688c64b7306
 NeedsCompilation: no
-Packaged: 2025-06-10 09:57:33 UTC; root
+Packaged: 2025-06-10 11:50:14 UTC; root
 Author: First Last [aut, cre] (ORCID: YOUR-ORCID-ID)
 Maintainer: First Last <first.last@example.com>
-Built: R 4.5.0; ; 2025-06-10 09:57:34 UTC; unix
+Built: R 4.5.0; ; 2025-06-10 11:50:16 UTC; unix
