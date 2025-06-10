@@ -7,6 +7,7 @@ copy_number_prediction <- function() {
 
   # If any such RDS exists, skip execution
   if (length(existing_rds) > 0) {
+  message(paste0("The file 'copy_number_prediction.RDS' already exists in: ", qiime_output_dir, "\nSkipping copy number prediction."))
   } else {
   # Otherwise, run the prediction steps
   micromamba_path <- "/content/envs/epa-env/bin"
