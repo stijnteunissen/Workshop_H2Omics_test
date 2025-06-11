@@ -42,7 +42,6 @@ def norm_and_import():
 
         # Assign to R
         ro.r.assign("present_variable_factors", ro.StrVector(factors))
-        print("Present variable factors assigned to R:", factors)
 
         # Retrieve R variables and convert to strings
         base_path = str(ro.r("base_path")[0])
@@ -111,7 +110,6 @@ def norm_and_import():
                     src = os.path.join(git_folder, file_name)
                     dst = os.path.join(qiime2_output_folder, file_name)
                     shutil.copy2(src, dst)
-                    print(f"Copied: {file_name} → {qiime2_output_folder}")
         else:
             print(f"Git folder not found: {git_folder}")
 
