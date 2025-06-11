@@ -17,13 +17,13 @@ RemoteHost: api.github.com
 RemoteRepo: H2Omics
 RemoteUsername: stijnteunissen
 RemoteRef: HEAD
-RemoteSha: 7d8b1ea6bed7ebb710eb5f95ed8bc110bbc6f0d6
+RemoteSha: b986878dc469c2c193740cd7fd47febcace0e35a
 GithubRepo: H2Omics
 GithubUsername: stijnteunissen
 GithubRef: HEAD
-GithubSHA1: 7d8b1ea6bed7ebb710eb5f95ed8bc110bbc6f0d6
+GithubSHA1: b986878dc469c2c193740cd7fd47febcace0e35a
 NeedsCompilation: no
-Packaged: 2025-05-12 09:26:40 UTC; root
+Packaged: 2025-06-11 13:32:13 UTC; root
 Author: First Last [aut, cre] (ORCID: YOUR-ORCID-ID)
 Maintainer: First Last <first.last@example.com>
-Built: R 4.5.0; ; 2025-05-12 09:26:40 UTC; unix
+Built: R 4.5.0; ; 2025-06-11 13:32:13 UTC; unix
