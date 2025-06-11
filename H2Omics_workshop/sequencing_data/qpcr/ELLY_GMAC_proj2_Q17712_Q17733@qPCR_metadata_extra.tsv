@@ -3,5 +3,5 @@ Sample.01	sample	6	dna	exp_2	Untreated_water	idna	0
 Sample.02	sample	6	dna	exp_2	Treated_water	idna	0
 Sample.03	sample	6	dna	exp_2	Untreated_water	idna	3
 Sample.04	sample	6	dna	exp_2	Treated_water	idna	3
-Sample.blank	blank	0.00001	NA	NA	NA	NA	NA
+Sample.blank	blank	0	NA	NA	NA	NA	NA
 Sample.mock	mock	6	NA	NA	NA	NA	NA
