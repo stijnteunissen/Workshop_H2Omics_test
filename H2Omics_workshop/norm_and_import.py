@@ -22,6 +22,9 @@ def norm_and_import():
     confirm_button = widgets.Button(description="Run Import")
 
     def on_confirm(b):
+        clear_output(wait=True)
+        display(norm_dropdown, confirm_button)
+
         # Assign norm_method to R
         norm_method = norm_dropdown.value
         ro.r.assign("norm_method", norm_method)
