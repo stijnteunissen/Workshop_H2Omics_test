@@ -5,7 +5,7 @@ import shutil
 import re
 import pandas as pd
 import ipywidgets as widgets
-from IPython.display import display
+from IPython.display import display, clear_output 
 import rpy2.robjects as ro
 
 def norm_and_import():
