@@ -93,7 +93,7 @@ def norm_and_import():
         if tsv_path and os.path.exists(tsv_path):
             tsv_data = pd.read_csv(tsv_path, sep='\t')
             print("TSV File (first 5 rows):")
-            display(tsv_data.head(5))
+            display(tsv_data.head(6))
         else:
             print(f"TSV file not found in git folder: {git_folder}")
 
