@@ -7,18 +7,18 @@ copy_number_prediction <- function() {
 
   # List files that match the prediction RDS pattern
   rasperGade16S_file <- list.files(destination_folder, pattern = "prediction\\.RDS$", full.names = TRUE)
-
+  
   # Read the RDS file
   rasperGade16S_rds <- readRDS(rasperGade16S_file)
-
   # Create a tibble from the discrete slot and rename/select relevant columns
   raspergade_df <- rasperGade16S_rds$discrete %>%
     dplyr::rename(Feature_ID = label,
                   copy_number = x,
                   probability = probs) %>%
     dplyr::select(Feature_ID, copy_number, probability) %>%
+    dplyr::mutate(probability = round(probability, 2)) %>% 
     as_tibble()
-
+  
   # Construct the qiime output directory path
   qiime_output_dir <- file.path(base_path, projects, "qiime2_output")
 
