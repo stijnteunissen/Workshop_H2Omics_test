@@ -53,6 +53,10 @@ def import_files():
             new_file = os.path.join(dest_dir, f"{projects}_classifier.qza")
             os.rename(old_file, new_file)
             print(f"Renamed '{os.path.basename(old_file)}' to '{os.path.basename(new_file)}'.")
+        
+        unrooted_files = glob.glob(os.path.join(dest_dir, "*unrooted-tree*.qza"))
+        for uf in unrooted_files:
+            os.remove(uf)
         return
     
     # If files are missing, prompt for upload
