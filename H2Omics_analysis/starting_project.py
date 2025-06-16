@@ -126,6 +126,21 @@ def starting_project():
                 else:
                     print(f"Source folder '{source_path}' does not exist.")
             
+            # metadata 
+            meta_source = os.path.join(project_folder, "qiime_analysis", "input")
+            if os.path.exists(meta_source):
+                for fname in os.listdir(meta_source):
+                     if "metadata" in fname.lower():
+                        s_meta = os.path.join(meta_source, fname)
+                        d_meta = os.path.join(qiime2_output_path, fname)
+                        try:
+                            shutil.copy2(s_meta, d_meta)
+                            print(f"Metadata bestand '{fname}' gekopieerd naar qiime2_output.")
+                        except Exception as e:
+                            print(f"Error copying metadata {s_meta} to {d_meta}: {e}")
+                else:
+                    print(f"Input folder voor metadata '{meta_source}' bestaat niet.")
+            
             # Display project information
             print("Project name (projects):", project_name)
             print("Base path to r_visualisation:", base_path)
