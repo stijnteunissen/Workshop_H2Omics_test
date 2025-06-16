@@ -4,10 +4,6 @@ Welcome to the H2Omics repository. This repository hosts notebooks that provide 
 
 The notebooks in this repository are designed so that you can perform your analysis without the need to download or install any additional software on your computer – all you require is a Google account.
 
-## Notebooks Included
+## License
 
-* **H2Omics_workshop.ipynb** – This notebook is intended for use during our live workshop. It offers guided instruction and practical examples with pre-loaded data.  
-
-## Additional Folders
-
-Within this repository, you will also find two folders. These folders do not need to be used directly. They contain several scripts to which the notebooks refer.
+These notebooks are licensed under the MIT License with additional terms restricting their use to non-commercial research only. See the [LICENSE](LICENSE.md) file for details.
