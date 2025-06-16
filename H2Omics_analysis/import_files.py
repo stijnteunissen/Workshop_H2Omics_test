@@ -28,8 +28,9 @@ def import_files():
         "*representative_sequences*.qza": "file containing 'representative_sequences' and ending with .qza"
     }
     # Any metadata file ending in .tsv, .txt, or .csv
-    metadata_patterns = ["*metadata*.tsv", "*metadata*.txt", "*metadata*.csv"]
-    
+    metadata_patterns       = ["*metadata.tsv", "*metadata.txt", "*metadata.csv"]  
+    metadata_extra_patterns = ["*metadata_extra.tsv", "*metadata_extra.txt", "*metadata_extra.csv"]
+
     def check_missing():
         """Return list of descriptions for missing required files."""
         missing = []
@@ -37,9 +38,12 @@ def import_files():
         for pattern, description in required_patterns.items():
             if not glob.glob(os.path.join(dest_dir, pattern)):
                 missing.append(description)
-        # Check metadata
+        # Check plain metadata
         if not any(glob.glob(os.path.join(dest_dir, pat)) for pat in metadata_patterns):
-            missing.append("metadata file ending in .tsv, .txt, or .csv")
+            missing.append("metadata file ending in .tsv, .txt, or .csv")                 ### AANGEPAST
+        # Check metadata_extra
+        if not any(glob.glob(os.path.join(dest_dir, pat)) for pat in metadata_extra_patterns):
+            missing.append("metadata_extra file ending in .tsv, .txt, or .csv")           ### AANGEPAST
         return missing
     
     # Initial check
