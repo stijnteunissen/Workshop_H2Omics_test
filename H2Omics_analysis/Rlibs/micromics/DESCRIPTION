@@ -5,8 +5,7 @@ Authors@R:
     person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
 Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-        license
+License: MIT + file LICENSE.md
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
@@ -18,13 +17,13 @@ RemoteHost: api.github.com
 RemoteRepo: micromics
 RemoteUsername: stijnteunissen
 RemoteRef: HEAD
-RemoteSha: 2e28df8784bbe1f4c8e4b95e680b10cf1377faf5
+RemoteSha: 309e9fce1c8a03ce85fe7897d49749447f4e200f
 GithubRepo: micromics
 GithubUsername: stijnteunissen
 GithubRef: HEAD
-GithubSHA1: 2e28df8784bbe1f4c8e4b95e680b10cf1377faf5
+GithubSHA1: 309e9fce1c8a03ce85fe7897d49749447f4e200f
 NeedsCompilation: no
-Packaged: 2025-06-12 07:45:38 UTC; root
+Packaged: 2025-06-16 12:31:59 UTC; root
 Author: First Last [aut, cre] (ORCID: YOUR-ORCID-ID)
 Maintainer: First Last <first.last@example.com>
-Built: R 4.5.0; ; 2025-06-12 07:45:39 UTC; unix
+Built: R 4.5.0; ; 2025-06-16 12:32:00 UTC; unix
