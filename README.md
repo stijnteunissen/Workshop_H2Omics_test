@@ -11,4 +11,4 @@ These notebooks are licensed under the MIT License with additional terms restric
 ## Cite this work
 If you use this repository, please cite it as:
 
-Teunissen, S. (2025). *Workshop_H2Omics_test*. GitHub. https://github.com/stijnteunissen/Workshop_H2Omics_test
+Teunissen, S., van Veelen, H. P. J., Silvius, J. (2025). *Workshop_H2Omics_test*. GitHub. https://github.com/stijnteunissen/Workshop_H2Omics_test
